@@ -1,0 +1,7145 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "WebApiWahoo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/Calificacion/ListCalificacion": {
+      "get": {
+        "tags": [
+          "Calificacion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CalificacionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Calificacion/CreateCalificacion": {
+      "post": {
+        "tags": [
+          "Calificacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCalificacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Calificacion/UpdateCalificacion": {
+      "put": {
+        "tags": [
+          "Calificacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCalificacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Catalogo/ListCatalogo": {
+      "get": {
+        "tags": [
+          "Catalogo"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CatalogoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Catalogo/CreateCatalogo": {
+      "post": {
+        "tags": [
+          "Catalogo"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCatalogoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Catalogo/UpdateCatalogo": {
+      "put": {
+        "tags": [
+          "Catalogo"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCatalogoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CategoriaLog/ListCategoriaLog": {
+      "get": {
+        "tags": [
+          "CategoriaLog"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CategoriaLogModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CategoriaLog/CreateCategoriaLog": {
+      "post": {
+        "tags": [
+          "CategoriaLog"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCategoriaLogCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CategoriaLog/UpdateCategoriaLog": {
+      "put": {
+        "tags": [
+          "CategoriaLog"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCategoriaLogCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CategoriaProducto/ListCategoriaProducto": {
+      "get": {
+        "tags": [
+          "CategoriaProducto"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CategoriaProductoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CategoriaProducto/CreateCategoriaProducto": {
+      "post": {
+        "tags": [
+          "CategoriaProducto"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCategoriaProductoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CategoriaProducto/UpdateCategoriaProducto": {
+      "put": {
+        "tags": [
+          "CategoriaProducto"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCategoriaProductoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Chat/ListChat": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChatModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Chat/CreateChat": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateChatCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Chat/UpdateChat": {
+      "put": {
+        "tags": [
+          "Chat"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateChatCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Ciudad/ListCiudad": {
+      "get": {
+        "tags": [
+          "Ciudad"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CiudadModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Ciudad/CreateCiudad": {
+      "post": {
+        "tags": [
+          "Ciudad"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCiudadCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Ciudad/UpdateCiudad": {
+      "put": {
+        "tags": [
+          "Ciudad"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCiudadCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CriterioEvaluacion/ListCriterioEvaluacion": {
+      "get": {
+        "tags": [
+          "CriterioEvaluacion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CriterioEvaluacionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CriterioEvaluacion/CreateCriterioEvaluacion": {
+      "post": {
+        "tags": [
+          "CriterioEvaluacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCriterioEvaluacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/CriterioEvaluacion/UpdateCriterioEvaluacion": {
+      "put": {
+        "tags": [
+          "CriterioEvaluacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCriterioEvaluacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Departamento/ListDepartamento": {
+      "get": {
+        "tags": [
+          "Departamento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DepartamentoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Departamento/CreateDepartamento": {
+      "post": {
+        "tags": [
+          "Departamento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateDepartamentoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Departamento/UpdateDepartamento": {
+      "put": {
+        "tags": [
+          "Departamento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateDepartamentoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Dia/ListDia": {
+      "get": {
+        "tags": [
+          "Dia"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DiaModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Dia/CreateDia": {
+      "post": {
+        "tags": [
+          "Dia"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateDiaCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Dia/UpdateDia": {
+      "put": {
+        "tags": [
+          "Dia"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateDiaCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Domicilio/ListDomicilio": {
+      "get": {
+        "tags": [
+          "Domicilio"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DomicilioModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Domicilio/CreateDomicilio": {
+      "post": {
+        "tags": [
+          "Domicilio"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateDomicilioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Domicilio/UpdateDomicilio": {
+      "put": {
+        "tags": [
+          "Domicilio"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateDomicilioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Entidad/ListEntidad": {
+      "get": {
+        "tags": [
+          "Entidad"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EntidadModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Entidad/CreateEntidad": {
+      "post": {
+        "tags": [
+          "Entidad"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateEntidadCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Entidad/UpdateEntidad": {
+      "put": {
+        "tags": [
+          "Entidad"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateEntidadCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Estado/ListEstado": {
+      "get": {
+        "tags": [
+          "Estado"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EstadoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Estado/CreateEstado": {
+      "post": {
+        "tags": [
+          "Estado"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateEstadoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Estado/UpdateEstado": {
+      "put": {
+        "tags": [
+          "Estado"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateEstadoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/FaseDomicilio/ListFaseDomicilio": {
+      "get": {
+        "tags": [
+          "FaseDomicilio"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/FaseDomicilioModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/FaseDomicilio/CreateFaseDomicilio": {
+      "post": {
+        "tags": [
+          "FaseDomicilio"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateFaseDomicilioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/FaseDomicilio/UpdateFaseDomicilio": {
+      "put": {
+        "tags": [
+          "FaseDomicilio"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateFaseDomicilioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Horario/ListHorario": {
+      "get": {
+        "tags": [
+          "Horario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/HorarioModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Horario/CreateHorario": {
+      "post": {
+        "tags": [
+          "Horario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateHorarioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Horario/UpdateHorario": {
+      "put": {
+        "tags": [
+          "Horario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateHorarioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Item/ListItem": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItemModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Item/CreateItem": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateItemCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Item/UpdateItem": {
+      "put": {
+        "tags": [
+          "Item"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateItemCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Log/ListLog": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LogModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Log/CreateLog": {
+      "post": {
+        "tags": [
+          "Log"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateLogCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Log/UpdateLog": {
+      "put": {
+        "tags": [
+          "Log"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateLogCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/MedioPago/ListMedioPago": {
+      "get": {
+        "tags": [
+          "MedioPago"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MedioPagoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/MedioPago/CreateMedioPago": {
+      "post": {
+        "tags": [
+          "MedioPago"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateMedioPagoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/MedioPago/UpdateMedioPago": {
+      "put": {
+        "tags": [
+          "MedioPago"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateMedioPagoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Modulo/ListModulo": {
+      "get": {
+        "tags": [
+          "Modulo"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ModuloModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Modulo/CreateModulo": {
+      "post": {
+        "tags": [
+          "Modulo"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateModuloCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Modulo/UpdateModulo": {
+      "put": {
+        "tags": [
+          "Modulo"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateModuloCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Notificacion/ListNotificacion": {
+      "get": {
+        "tags": [
+          "Notificacion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NotificacionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Notificacion/CreateNotificacion": {
+      "post": {
+        "tags": [
+          "Notificacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateNotificacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Notificacion/UpdateNotificacion": {
+      "put": {
+        "tags": [
+          "Notificacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateNotificacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Pais/ListPais": {
+      "get": {
+        "tags": [
+          "Pais"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaisModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Pais/CreatePais": {
+      "post": {
+        "tags": [
+          "Pais"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreatePaisCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Pais/UpdatePais": {
+      "put": {
+        "tags": [
+          "Pais"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdatePaisCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ParametroEvaluacion/ListParametroEvaluacion": {
+      "get": {
+        "tags": [
+          "ParametroEvaluacion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ParametroEvaluacionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ParametroEvaluacion/CreateParametroEvaluacion": {
+      "post": {
+        "tags": [
+          "ParametroEvaluacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateParametroEvaluacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ParametroEvaluacion/UpdateParametroEvaluacion": {
+      "put": {
+        "tags": [
+          "ParametroEvaluacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateParametroEvaluacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Permiso/ListPermiso": {
+      "get": {
+        "tags": [
+          "Permiso"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PermisoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Permiso/CreatePermiso": {
+      "post": {
+        "tags": [
+          "Permiso"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreatePermisoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Permiso/UpdatePermiso": {
+      "put": {
+        "tags": [
+          "Permiso"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdatePermisoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/PQRS/ListPQRS": {
+      "get": {
+        "tags": [
+          "PQRS"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PQRSModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/PQRS/CreatePQRS": {
+      "post": {
+        "tags": [
+          "PQRS"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreatePQRSCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/PQRS/UpdatePQRS": {
+      "put": {
+        "tags": [
+          "PQRS"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdatePQRSCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Producto/ListProducto": {
+      "get": {
+        "tags": [
+          "Producto"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Producto/CreateProducto": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateProductoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Producto/UpdateProducto": {
+      "put": {
+        "tags": [
+          "Producto"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateProductoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Promocion/ListPromocion": {
+      "get": {
+        "tags": [
+          "Promocion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PromocionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Promocion/CreatePromocion": {
+      "post": {
+        "tags": [
+          "Promocion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreatePromocionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Promocion/UpdatePromocion": {
+      "put": {
+        "tags": [
+          "Promocion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdatePromocionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Rol/ListRol": {
+      "get": {
+        "tags": [
+          "Rol"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/RolModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Rol/CreateRol": {
+      "post": {
+        "tags": [
+          "Rol"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateRolCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Rol/UpdateRol": {
+      "put": {
+        "tags": [
+          "Rol"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateRolCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Saldo/ListSaldo": {
+      "get": {
+        "tags": [
+          "Saldo"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SaldoModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Saldo/CreateSaldo": {
+      "post": {
+        "tags": [
+          "Saldo"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateSaldoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Saldo/UpdateSaldo": {
+      "put": {
+        "tags": [
+          "Saldo"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateSaldoCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TiempoFase/ListTiempoFase": {
+      "get": {
+        "tags": [
+          "TiempoFase"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TiempoFaseModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TiempoFase/CreateTiempoFase": {
+      "post": {
+        "tags": [
+          "TiempoFase"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateTiempoFaseCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TiempoFase/UpdateTiempoFase": {
+      "put": {
+        "tags": [
+          "TiempoFase"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTiempoFaseCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoEntidad/ListTipoEntidad": {
+      "get": {
+        "tags": [
+          "TipoEntidad"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoEntidadModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoEntidad/CreateTipoEntidad": {
+      "post": {
+        "tags": [
+          "TipoEntidad"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateTipoEntidadCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoEntidad/UpdateTipoEntidad": {
+      "put": {
+        "tags": [
+          "TipoEntidad"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTipoEntidadCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoIdentificacion/ListTipoIdentificacion": {
+      "get": {
+        "tags": [
+          "TipoIdentificacion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoIdentificacionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoIdentificacion/CreateTipoIdentificacion": {
+      "post": {
+        "tags": [
+          "TipoIdentificacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateTipoIdentificacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoIdentificacion/UpdateTipoIdentificacion": {
+      "put": {
+        "tags": [
+          "TipoIdentificacion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTipoIdentificacionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoPQRS/ListTipoPQRS": {
+      "get": {
+        "tags": [
+          "TipoPQRS"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoPQRSModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoPQRS/CreateTipoPQRS": {
+      "post": {
+        "tags": [
+          "TipoPQRS"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateTipoPQRSCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoPQRS/UpdateTipoPQRS": {
+      "put": {
+        "tags": [
+          "TipoPQRS"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTipoPQRSCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoPromocion/ListTipoPromocion": {
+      "get": {
+        "tags": [
+          "TipoPromocion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoPromocionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoPromocion/CreateTipoPromocion": {
+      "post": {
+        "tags": [
+          "TipoPromocion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateTipoPromocionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoPromocion/UpdateTipoPromocion": {
+      "put": {
+        "tags": [
+          "TipoPromocion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTipoPromocionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoTransaccion/ListTipoTransaccion": {
+      "get": {
+        "tags": [
+          "TipoTransaccion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoTransaccionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoTransaccion/CreateTipoTransaccion": {
+      "post": {
+        "tags": [
+          "TipoTransaccion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateTipoTransaccionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TipoTransaccion/UpdateTipoTransaccion": {
+      "put": {
+        "tags": [
+          "TipoTransaccion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTipoTransaccionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Transaccion/ListTransaccion": {
+      "get": {
+        "tags": [
+          "Transaccion"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TransaccionModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Transaccion/CreateTransaccion": {
+      "post": {
+        "tags": [
+          "Transaccion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateTransaccionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Transaccion/UpdateTransaccion": {
+      "put": {
+        "tags": [
+          "Transaccion"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTransaccionCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Usuario/ListUsuario": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UsuarioModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Usuario/CreateUsuario": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateUsuarioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Usuario/UpdateUsuario": {
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateUsuarioCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CalificacionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "puntajeCalificacion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parametroEvaluacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "criterioEvaluacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CatalogoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionCatalogo": {
+          "type": "string"
+        },
+        "itemId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "entidadId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CategoriaLogModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionCategoriaLog": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CategoriaProductoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionCategoriaProducto": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ChatModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "mensaje": {
+          "type": "string"
+        },
+        "documentoSoporte": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "emisor": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "receptor": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CiudadModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "nombreCiudad": {
+          "type": "string"
+        },
+        "departamentoId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateCalificacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "puntajeCalificacion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parametroEvaluacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "criterioEvaluacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateCatalogoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCatalogo": {
+          "type": "string"
+        },
+        "itemId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "entidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateCategoriaLogCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCategoriaLog": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateCategoriaProductoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCategoriaProducto": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateChatCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "mensaje": {
+          "type": "string"
+        },
+        "documentoSoporte": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "emisor": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "receptor": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateCiudadCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreCiudad": {
+          "type": "string"
+        },
+        "departamentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateCriterioEvaluacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCriterioEvaluacion": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateDepartamentoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreDepartamento": {
+          "type": "string"
+        },
+        "paisId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateDiaCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionDiaLaboral": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateDomicilioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionDomicilio": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "faseDomicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAceptaDomiciliario": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaAceptaEntidad": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaEntrega": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "aceptaEntidad": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "aceptaDomiciliario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "domicilioExitoso": {
+          "type": "boolean"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateEntidadCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionEntidad": {
+          "type": "string"
+        },
+        "tipoEntidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "medioPagoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateEstadoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionEstado": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateFaseDomicilioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionFaseDomicilio": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateHorarioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionHorario": {
+          "type": "string"
+        },
+        "franjaHorario": {
+          "type": "string"
+        },
+        "diasLaborales": {
+          "type": "string"
+        },
+        "horaInicio": {
+          "type": "string"
+        },
+        "horaFin": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "diaId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateItemCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionItem": {
+          "type": "string"
+        },
+        "cantidadItem": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "unidadMedidaItem": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateLogCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionLog": {
+          "type": "string"
+        },
+        "categoriaLogId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateMedioPagoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionMedioPago": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateModuloCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionModulo": {
+          "type": "string"
+        },
+        "permisoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateNotificacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionNotificacion": {
+          "type": "string"
+        },
+        "enviada": {
+          "type": "boolean"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreatePQRSCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionPQRS": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tipoPQRSId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreatePaisCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombrePais": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateParametroEvaluacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionParametro": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreatePermisoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionPermiso": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateProductoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionProducto": {
+          "type": "string"
+        },
+        "stock": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "valorProducto": {
+          "format": "double",
+          "type": "number"
+        },
+        "imagenProducto": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoriaProductoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreatePromocionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionPromocion": {
+          "type": "string"
+        },
+        "productoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaInicioPromocion": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaFinPromocion": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "imagenPromocion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "codigoPromocional": {
+          "type": "string"
+        },
+        "tipoPromocionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateRolCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionRol": {
+          "type": "string"
+        },
+        "moduloId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateSaldoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "saldoInicial": {
+          "format": "double",
+          "type": "number"
+        },
+        "saldoFinal": {
+          "format": "double",
+          "type": "number"
+        },
+        "saldoActual": {
+          "format": "double",
+          "type": "number"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateTiempoFaseCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "horaCambioFase": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "domicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateTipoEntidadCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoEntidad": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateTipoIdentificacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoIdentificacion": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateTipoPQRSCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoPQRS": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateTipoPromocionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoPromocion": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateTipoTransaccionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "decripcionTipoTransaccion": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateTransaccionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTransaccion": {
+          "type": "string"
+        },
+        "tipoTransaccionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "entidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "domicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionAdicional": {
+          "type": "string"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateUsuarioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreUsuario": {
+          "type": "string"
+        },
+        "apellidoUsuario": {
+          "type": "string"
+        },
+        "telefonoUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "expedicionCedula": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "direccionUsuario": {
+          "type": "string"
+        },
+        "placaMoto": {
+          "type": "string"
+        },
+        "licenciaConduccion": {
+          "type": "string"
+        },
+        "horarioUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "formaPago": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "login": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "documentos": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "circulacion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "causacionPagos": {
+          "type": "string"
+        },
+        "rolId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tipoIdentificacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CriterioEvaluacionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionCriterioEvaluacion": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DepartamentoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "nombreDepartamento": {
+          "type": "string"
+        },
+        "paisId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DiaModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionDiaLaboral": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DomicilioModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionDomicilio": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "faseDomicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAceptaDomiciliario": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaAceptaEntidad": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaEntrega": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "aceptaEntidad": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "aceptaDomiciliario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "domicilioExitoso": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "EntidadModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionEntidad": {
+          "type": "string"
+        },
+        "tipoEntidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "medioPagoId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "EstadoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionEstado": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "FaseDomicilioModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionFaseDomicilio": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "HorarioModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionHorario": {
+          "type": "string"
+        },
+        "franjasHorario": {
+          "type": "string"
+        },
+        "horaInicio": {
+          "type": "string"
+        },
+        "horaFin": {
+          "type": "string"
+        },
+        "diasLaborales": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "diaId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ItemModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionItem": {
+          "type": "string"
+        },
+        "cantidadItem": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "unidadMedidaItem": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "LogModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionLog": {
+          "type": "string"
+        },
+        "categoriaLogId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "MedioPagoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionMedioPago": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ModuloModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionModulo": {
+          "type": "string"
+        },
+        "permisoId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "NotificacionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionNotificacion": {
+          "type": "string"
+        },
+        "enviada": {
+          "type": "boolean"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PQRSModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionPQRS": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tipoPQRSId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PaisModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "nombrePais": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ParametroEvaluacionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionParametro": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PermisoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionPermiso": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ProductoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionProducto": {
+          "type": "string"
+        },
+        "stock": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "valorProducto": {
+          "format": "double",
+          "type": "number"
+        },
+        "imagenProducto": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoriaProductoId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PromocionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionPromocion": {
+          "type": "string"
+        },
+        "productoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaInicioPromocion": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaFinPromocion": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "imagenPromocion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "codigoPromocional": {
+          "type": "string"
+        },
+        "tipoPromocionId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "RolModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionRol": {
+          "type": "string"
+        },
+        "moduloId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SaldoModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "saldoInicial": {
+          "format": "double",
+          "type": "number"
+        },
+        "saldoFinal": {
+          "format": "double",
+          "type": "number"
+        },
+        "saldoActual": {
+          "format": "double",
+          "type": "number"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TiempoFaseModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "horaCambioFase": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "domicilioId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TipoEntidadModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionTipoEntidad": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TipoIdentificacionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionTipoIdentificacion": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TipoPQRSModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionTipoPQRS": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TipoPromocionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionTipoPromocion": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TipoTransaccionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "decripcionTipoTransaccion": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TransaccionModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcionTransaccion": {
+          "type": "string"
+        },
+        "tipoTransaccionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "entidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "domicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionAdicional": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCalificacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "puntajeCalificacion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parametroEvaluacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "criterioEvaluacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCatalogoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCatalogo": {
+          "type": "string"
+        },
+        "itemId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "entidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCategoriaLogCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCategoriaLog": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCategoriaProductoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCategoriaProducto": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateChatCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "mensaje": {
+          "type": "string"
+        },
+        "documentoSoporte": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "emisor": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "receptor": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCiudadCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreCiudad": {
+          "type": "string"
+        },
+        "departamentoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCriterioEvaluacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionCriterioEvaluacion": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateDepartamentoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreDepartamento": {
+          "type": "string"
+        },
+        "paisId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateDiaCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionDiaLaboral": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateDomicilioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionDomicilio": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "faseDomicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaAceptaDomiciliario": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaAceptaEntidad": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaEntrega": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "aceptaEntidad": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "aceptaDomiciliario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "domicilioExitoso": {
+          "type": "boolean"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateEntidadCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionEntidad": {
+          "type": "string"
+        },
+        "tipoEntidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "medioPagoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateEstadoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionEstado": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateFaseDomicilioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionFaseDomicilio": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateHorarioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionHorario": {
+          "type": "string"
+        },
+        "franjaHorario": {
+          "type": "string"
+        },
+        "diasLaborales": {
+          "type": "string"
+        },
+        "horaInicio": {
+          "type": "string"
+        },
+        "horaFin": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "diaId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateItemCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionItem": {
+          "type": "string"
+        },
+        "cantidadItem": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "unidadMedidaItem": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateLogCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionLog": {
+          "type": "string"
+        },
+        "categoriaLogId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateMedioPagoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionMedioPago": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateModuloCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionModulo": {
+          "type": "string"
+        },
+        "permisoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateNotificacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionNotificacion": {
+          "type": "string"
+        },
+        "enviada": {
+          "type": "boolean"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdatePQRSCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionPQRS": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tipoPQRSId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdatePaisCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombrePais": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateParametroEvaluacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionParametro": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdatePermisoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionPermiso": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateProductoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionProducto": {
+          "type": "string"
+        },
+        "stock": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "valorProducto": {
+          "format": "double",
+          "type": "number"
+        },
+        "imagenProducto": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoriaProductoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdatePromocionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionPromocion": {
+          "type": "string"
+        },
+        "productoId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaInicioPromocion": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaFinPromocion": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "imagenPromocion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "codigoPromocional": {
+          "type": "string"
+        },
+        "tipoPromocionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateRolCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionRol": {
+          "type": "string"
+        },
+        "moduloId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateSaldoCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "saldoInicial": {
+          "format": "double",
+          "type": "number"
+        },
+        "saldoFinal": {
+          "format": "double",
+          "type": "number"
+        },
+        "saldoActual": {
+          "format": "double",
+          "type": "number"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTiempoFaseCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "horaCambioFase": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "domicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTipoEntidadCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoEntidad": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTipoIdentificacionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoIdentificacion": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTipoPQRSCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoPQRS": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTipoPromocionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTipoPromocion": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTipoTransaccionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "decripcionTipoTransaccion": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTransaccionCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionTransaccion": {
+          "type": "string"
+        },
+        "tipoTransaccionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "entidadId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "domicilioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcionAdicional": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateUsuarioCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreUsuario": {
+          "type": "string"
+        },
+        "apellidoUsuario": {
+          "type": "string"
+        },
+        "telefonoUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "expedicionCedula": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "direccionUsuario": {
+          "type": "string"
+        },
+        "placaMoto": {
+          "type": "string"
+        },
+        "licenciaConduccion": {
+          "type": "string"
+        },
+        "horarioUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "formaPago": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "login": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "documentos": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "circulacion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "causacionPagos": {
+          "type": "string"
+        },
+        "rolId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tipoIdentificacionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UsuarioModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioAdd": {
+          "type": "string"
+        },
+        "usuarioUp": {
+          "type": "string"
+        },
+        "fechaAdd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fechaUp": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "nombreUsuario": {
+          "type": "string"
+        },
+        "apellidoUsuario": {
+          "type": "string"
+        },
+        "telefonoUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "expedicionCedula": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "direccionUsuario": {
+          "type": "string"
+        },
+        "placaMoto": {
+          "type": "string"
+        },
+        "licenciaConduccion": {
+          "type": "string"
+        },
+        "horarioUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "formaPago": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "login": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "documentos": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "circulacion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "causacionPagos": {
+          "type": "string"
+        },
+        "rolId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tipoIdentificacionId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

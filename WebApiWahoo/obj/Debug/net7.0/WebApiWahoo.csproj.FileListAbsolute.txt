@@ -172,3 +172,5 @@ C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Debug\net7.0\WebApiWahoo.pdb
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Debug\net7.0\WebApiWahoo.genruntimeconfig.cache
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Debug\net7.0\ref\WebApiWahoo.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Debug\net7.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Debug\net7.0\Azure.Security.KeyVault.Secrets.dll
