@@ -21,12 +21,26 @@ namespace WahooInfraestructure.Persistence
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.FechaAdd = DateTime.Now;
-                        entry.Entity.UsuarioAdd = "Sistema";
+                        if (entry.Entity.FechaAdd.ToString() == "")
+                        {
+                            entry.Entity.FechaAdd = DateTime.Now;
+                        }
+                        if (entry.Entity.UsuarioAdd.ToString() == "")
+                        {
+                            entry.Entity.UsuarioAdd = "Sistema";
+                        }
+
                         break;
                     case EntityState.Modified:
-                        entry.Entity.FechaUp = DateTime.Now;
-                        entry.Entity.UsuarioUp = "Sistema";
+                        if (entry.Entity.FechaUp.ToString() == "")
+                        {
+                            entry.Entity.FechaUp = DateTime.Now;
+                        }
+                        if (entry.Entity.FechaUp.ToString() == "")
+                        {
+                            entry.Entity.UsuarioUp = "Sistema";
+                        }
+
                         break;
                 }
             }

@@ -15,6 +15,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices(builder.Configuration);
+// Agrega el servicio CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MiPolíticaCors", builder =>
+        builder.AllowAnyOrigin()  // Permite todas las solicitudes de cualquier origen
+               .AllowAnyMethod()  // Permite todos los métodos HTTP
+               .AllowAnyHeader()); // Permite cualquier encabezado
+});
 
 var app = builder.Build();
 
