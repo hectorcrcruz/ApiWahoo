@@ -12,7 +12,7 @@ namespace WahooApplication.Features.TipoEntidad.Queries.ListTipoEntidad
     {
         public ListTipoEntidadQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

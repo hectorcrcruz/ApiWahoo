@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Usuario.Queries.ListUsuario
     {
         public ListUsuarioQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Departamento.Queries.ListDepartamento
     {
         public ListDepartamentoQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

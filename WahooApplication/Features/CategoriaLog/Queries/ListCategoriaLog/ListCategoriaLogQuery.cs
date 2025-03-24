@@ -12,7 +12,7 @@ namespace WahooApplication.Features.CategoriaLog.Queries.ListCategoriaLog
     {
         public ListCategoriaLogQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

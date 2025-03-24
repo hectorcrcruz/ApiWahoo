@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListNotificacion")]
-        public async Task<ActionResult<IEnumerable<NotificacionModel>>> ListNotificacion(int? Id)
+        public async Task<ActionResult<IEnumerable<NotificacionModel>>> ListNotificacion(int? IdNotificacion)
         {
-            var query = await _mediator.Send(new ListNotificacionQuery(Id));
+            var query = await _mediator.Send(new ListNotificacionQuery(IdNotificacion));
             return Ok(query);
         }
 

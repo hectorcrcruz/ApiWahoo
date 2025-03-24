@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Modulo.Queries.ListModulo
     {
         public ListModuloQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

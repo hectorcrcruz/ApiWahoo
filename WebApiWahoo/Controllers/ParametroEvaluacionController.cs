@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListParametroEvaluacion")]
-        public async Task<ActionResult<IEnumerable<ParametroEvaluacionModel>>> ListParametroEvaluacion(int? Id)
+        public async Task<ActionResult<IEnumerable<ParametroEvaluacionModel>>> ListParametroEvaluacion(int? IdParametroEvaluacion)
         {
-            var query = await _mediator.Send(new ListParametroEvaluacionQuery(Id));
+            var query = await _mediator.Send(new ListParametroEvaluacionQuery(IdParametroEvaluacion));
             return Ok(query);
         }
 

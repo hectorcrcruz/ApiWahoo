@@ -12,7 +12,7 @@ namespace WahooApplication.Features.TipoPQRS.Queries.ListTipoPQRS
     {
         public ListTipoPQRSQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

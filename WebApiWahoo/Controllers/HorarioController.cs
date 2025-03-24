@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListHorario")]
-        public async Task<ActionResult<IEnumerable<HorarioModel>>> ListHorario(int? Id)
+        public async Task<ActionResult<IEnumerable<HorarioModel>>> ListHorario(int? IdHorario)
         {
-            var query = await _mediator.Send(new ListHorarioQuery(Id));
+            var query = await _mediator.Send(new ListHorarioQuery(IdHorario));
             return Ok(query);
         }
 

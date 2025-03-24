@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Dia.Queries.ListDia
     {
         public ListDiaQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

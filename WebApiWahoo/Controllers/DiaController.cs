@@ -29,9 +29,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListDia")]
-        public async Task<ActionResult<IEnumerable<DiaModel>>> ListDia(int? Id)
+        public async Task<ActionResult<IEnumerable<DiaModel>>> ListDia(int? IdDia)
         {
-            var query = await _mediator.Send(new ListDiaQuery(Id));
+            var query = await _mediator.Send(new ListDiaQuery(IdDia));
             return Ok(query);
         }
 

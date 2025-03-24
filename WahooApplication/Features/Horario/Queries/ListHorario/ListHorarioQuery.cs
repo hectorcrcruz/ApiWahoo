@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Horario.Queries.ListHorario
     {
         public ListHorarioQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

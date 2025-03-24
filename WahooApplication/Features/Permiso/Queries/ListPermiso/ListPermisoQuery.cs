@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Permiso.Queries.ListPermiso
     {
         public ListPermisoQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

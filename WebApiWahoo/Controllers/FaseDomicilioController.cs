@@ -29,9 +29,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListFaseDomicilio")]
-        public async Task<ActionResult<IEnumerable<FaseDomicilioModel>>> ListFaseDomicilio(int? Id)
+        public async Task<ActionResult<IEnumerable<FaseDomicilioModel>>> ListFaseDomicilio(int? IdFaseDomicilio)
         {
-            var query = await _mediator.Send(new ListFaseDomicilioQuery(Id));
+            var query = await _mediator.Send(new ListFaseDomicilioQuery(IdFaseDomicilio));
             return Ok(query);
         }
 

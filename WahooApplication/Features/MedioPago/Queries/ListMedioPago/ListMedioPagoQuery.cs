@@ -12,7 +12,7 @@ namespace WahooApplication.Features.MedioPago.Queries.ListMedioPago
     {
         public ListMedioPagoQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
 

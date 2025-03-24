@@ -26,9 +26,9 @@ namespace WebApiWahoo.Controllers
             _logger = logger;
         }
         [HttpGet("ListCalificacion")]
-        public async Task<ActionResult<IEnumerable<CalificacionModel>>> ListCalificacion(int? Id)
+        public async Task<ActionResult<IEnumerable<CalificacionModel>>> ListCalificacion(int? IdCalificacion)
         {
-            var query = await _mediator.Send(new ListCalificacionQuery(Id));
+            var query = await _mediator.Send(new ListCalificacionQuery(IdCalificacion));
             return Ok(query);
         }
 

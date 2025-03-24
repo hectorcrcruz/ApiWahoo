@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Producto.Queries.ListProducto
     {
         public ListProductoQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

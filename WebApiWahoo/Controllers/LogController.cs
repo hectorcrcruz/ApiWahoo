@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListLog")]
-        public async Task<ActionResult<IEnumerable<LogModel>>> ListLog(int? Id)
+        public async Task<ActionResult<IEnumerable<LogModel>>> ListLog(int? IdLog)
         {
-            var query = await _mediator.Send(new ListLogQuery (Id));
+            var query = await _mediator.Send(new ListLogQuery (IdLog));
             return Ok(query);
         }
 

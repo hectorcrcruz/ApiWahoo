@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Domicilio.Queries
     {
         public ListDomicilioQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

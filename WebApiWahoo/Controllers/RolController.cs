@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListRol")]
-        public async Task<ActionResult<IEnumerable<RolModel>>> ListRol(int? Id)
+        public async Task<ActionResult<IEnumerable<RolModel>>> ListRol(int? IdRol)
         {
-            var query = await _mediator.Send(new ListRolQuery(Id));
+            var query = await _mediator.Send(new ListRolQuery(IdRol));
             return Ok(query);
         }
 

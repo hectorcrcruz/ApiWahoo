@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Saldo.Queries.ListSaldo
     {
         public ListSaldoQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

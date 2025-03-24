@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Estado.Queries.ListEstado
     {
         public ListEstadoQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

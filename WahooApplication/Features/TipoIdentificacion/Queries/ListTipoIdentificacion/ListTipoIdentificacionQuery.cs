@@ -12,7 +12,7 @@ namespace WahooApplication.Features.TipoIdentificacion.Queries.ListTipoIdentific
     {
         public ListTipoIdentificacionQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

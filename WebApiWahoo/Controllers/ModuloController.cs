@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListModulo")]
-        public async Task<ActionResult<IEnumerable<ModuloModel>>> ListModulo(int? Id)
+        public async Task<ActionResult<IEnumerable<ModuloModel>>> ListModulo(int? IdModulo)
         {
-            var query = await _mediator.Send(new ListModuloQuery(Id));
+            var query = await _mediator.Send(new ListModuloQuery(IdModulo));
             return Ok(query);
         }
 

@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListTiempoFase")]
-        public async Task<ActionResult<IEnumerable<TiempoFaseModel>>> ListTiempoFase(int? Id)
+        public async Task<ActionResult<IEnumerable<TiempoFaseModel>>> ListTiempoFase(int? IdTiempoFase)
         {
-            var query = await _mediator.Send(new ListTiempoFaseQuery(Id));
+            var query = await _mediator.Send(new ListTiempoFaseQuery(IdTiempoFase));
             return Ok(query);
         }
 

@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Chat.Queries.ListChat
     {
         public ListChatQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

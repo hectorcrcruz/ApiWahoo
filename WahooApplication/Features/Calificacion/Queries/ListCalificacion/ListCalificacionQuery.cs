@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Calificacion.Queries.ListCalificacion
     {
         public ListCalificacionQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

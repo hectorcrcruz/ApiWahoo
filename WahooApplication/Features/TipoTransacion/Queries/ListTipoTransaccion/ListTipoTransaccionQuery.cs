@@ -12,7 +12,7 @@ namespace WahooApplication.Features.TipoTransacion.Queries.ListTipoTransaccion
     {
         public ListTipoTransaccionQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

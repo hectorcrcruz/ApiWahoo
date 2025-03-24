@@ -12,7 +12,7 @@ namespace WahooApplication.Features.PQRS.Queries.ListPQRS
     {
         public ListPQRSQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

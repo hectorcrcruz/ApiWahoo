@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Promocion.Queries.ListPromocion
     {
         public ListPromocionQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

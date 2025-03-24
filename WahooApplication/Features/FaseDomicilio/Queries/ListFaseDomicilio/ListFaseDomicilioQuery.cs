@@ -12,7 +12,7 @@ namespace WahooApplication.Features.FaseDomicilio.Queries.ListFaseDomicilio
     {
         public ListFaseDomicilioQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

@@ -29,9 +29,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListCatalogo")]
-        public async Task<ActionResult<IEnumerable<CatalogoModel>>> ListCatalogo(int? Id)
+        public async Task<ActionResult<IEnumerable<CatalogoModel>>> ListCatalogo(int? IdCatalogo)
         {
-            var query = await _mediator.Send(new ListCatalogoQuery(Id));
+            var query = await _mediator.Send(new ListCatalogoQuery(IdCatalogo));
             //_writeLog.WriteLog("La calificacion fue creada con el id {EntityAdd.Id}");
             return Ok(query);
         }

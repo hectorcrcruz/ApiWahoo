@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Notificacion.Queries.ListNotificacion
     {
         public ListNotificacionQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

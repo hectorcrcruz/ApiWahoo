@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
             _logger = logger;
         }
         [HttpGet("ListCategoriaLog")]
-        public async Task<ActionResult<IEnumerable<CategoriaLogModel>>> ListCategoriaLog(int? Id)
+        public async Task<ActionResult<IEnumerable<CategoriaLogModel>>> ListCategoriaLog(int? IdCategoriaLog)
         {
-            var query = await _mediator.Send(new ListCategoriaLogQuery(Id));
+            var query = await _mediator.Send(new ListCategoriaLogQuery(IdCategoriaLog));
             return Ok(query);
         }
         [HttpPost("CreateCategoriaLog")]

@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListTipoEntidad")]
-        public async Task<ActionResult<IEnumerable<TipoEntidadModel>>> ListTipoEntidad(int? Id)
+        public async Task<ActionResult<IEnumerable<TipoEntidadModel>>> ListTipoEntidad(int? IdTipoEntidad)
         {
-            var query = await _mediator.Send(new ListTipoEntidadQuery(Id));
+            var query = await _mediator.Send(new ListTipoEntidadQuery(IdTipoEntidad));
             return Ok(query);
         }
 

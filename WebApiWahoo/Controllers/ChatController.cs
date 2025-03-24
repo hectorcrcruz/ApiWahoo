@@ -29,9 +29,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListChat")]
-        public async Task<ActionResult<IEnumerable<ChatModel>>> ListChat(int? Id)
+        public async Task<ActionResult<IEnumerable<ChatModel>>> ListChat(int? IdChat)
         {
-            var query = await _mediator.Send(new ListChatQuery(Id));
+            var query = await _mediator.Send(new ListChatQuery(IdChat));
             return Ok(query);
         }
 

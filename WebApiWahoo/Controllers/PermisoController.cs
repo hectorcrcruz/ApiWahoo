@@ -28,9 +28,9 @@ namespace WebApiWahoo.Controllers
         }
 
         [HttpGet("ListPermiso")]
-        public async Task<ActionResult<IEnumerable<PermisoModel>>> ListPermiso(int? Id)
+        public async Task<ActionResult<IEnumerable<PermisoModel>>> ListPermiso(int? IdPermiso)
         {
-            var query = await _mediator.Send(new ListPermisoQuery(Id));
+            var query = await _mediator.Send(new ListPermisoQuery(IdPermiso));
             return Ok(query);
         }
 

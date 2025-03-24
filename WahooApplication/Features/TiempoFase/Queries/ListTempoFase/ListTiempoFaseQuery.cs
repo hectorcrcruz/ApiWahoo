@@ -12,7 +12,7 @@ namespace WahooApplication.Features.TiempoFase.Queries.ListTempoFase
     {
         public ListTiempoFaseQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

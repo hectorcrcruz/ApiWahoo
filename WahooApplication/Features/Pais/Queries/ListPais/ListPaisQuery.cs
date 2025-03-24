@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Pais.Queries.ListPais
     {
         public ListPaisQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

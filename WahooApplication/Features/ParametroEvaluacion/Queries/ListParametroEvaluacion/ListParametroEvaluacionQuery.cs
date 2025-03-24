@@ -12,7 +12,7 @@ namespace WahooApplication.Features.ParametroEvaluacion.Queries.ListParametroEva
     {
         public ListParametroEvaluacionQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }

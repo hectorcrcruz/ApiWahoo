@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Transaccion.Queries.ListTransaccion
     {
         public ListTransaccionQuery(int? id)
         {
-            id = Id;
+            Id = id;
         }
         public int? Id { get; set; }
     }
