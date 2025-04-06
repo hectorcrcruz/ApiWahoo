@@ -11,8 +11,8 @@ namespace WahooApplication.Features.Pais.Commands.AddPais
     {
         public int Id { get; set; }
         public string NombrePais { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

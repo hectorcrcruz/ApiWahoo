@@ -12,7 +12,7 @@ namespace WahooApplication.Features.CategoriaLog.Commands.UpCategoriaLog
         public int ? Id { get; set; }
         public string DescripcionCategoriaLog { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

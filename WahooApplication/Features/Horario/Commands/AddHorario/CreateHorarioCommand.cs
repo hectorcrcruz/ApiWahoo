@@ -19,7 +19,7 @@ namespace WahooApplication.Features.Horario.Commands.AddHorario
         public int UsuarioId { get; set; }
         public int DiaId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

@@ -16,8 +16,8 @@ namespace WahooApplication.Features.Transaccion.Commands.AddTransaccion
         public int EntidadId { get; set; }
         public int DomicilioId { get; set; }
         public string DescripcionAdicional { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

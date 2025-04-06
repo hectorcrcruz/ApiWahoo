@@ -16,7 +16,7 @@ namespace WahooApplication.Features.Chat.Commands.UpChat
         public int Receptor { get; set; }
         public byte Documento { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

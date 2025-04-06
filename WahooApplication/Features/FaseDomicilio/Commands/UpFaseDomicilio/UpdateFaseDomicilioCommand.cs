@@ -16,7 +16,7 @@ namespace WahooApplication.Features.FaseDomicilio.Commands.UpFaseDomicilio
         public int Id { get; set; }
         public string DescripcionFaseDomicilio { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

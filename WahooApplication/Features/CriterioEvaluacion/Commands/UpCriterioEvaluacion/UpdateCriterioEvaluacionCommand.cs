@@ -12,7 +12,7 @@ namespace WahooApplication.Features.CriterioEvaluacion.Commands.UpCriterioEvalua
         public int Id { get; set; }
         public string DescripcionCriterioEvaluacion { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

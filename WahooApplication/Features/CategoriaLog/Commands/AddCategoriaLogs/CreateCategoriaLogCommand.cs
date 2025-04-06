@@ -11,7 +11,7 @@ namespace WahooApplication.Features.CategoriaLog.Commands.AddCategoriaLogs
     {
         public int Id { get; set; }
         public string DescripcionCategoriaLog { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

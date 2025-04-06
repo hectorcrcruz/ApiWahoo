@@ -18,10 +18,11 @@ builder.Services.AddApplicationServices(builder.Configuration);
 // Agrega el servicio CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("MiPolíticaCors", builder =>
-        builder.AllowAnyOrigin()  // Permite todas las solicitudes de cualquier origen
-               .AllowAnyMethod()  // Permite todos los métodos HTTP
-               .AllowAnyHeader()); // Permite cualquier encabezado
+    options.AddPolicy("AllowCORS",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 });
 
 var app = builder.Build();
@@ -33,6 +34,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseSwagger();
+app.UseCors("AllowCORS");
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();

@@ -14,7 +14,7 @@ namespace WahooApplication.Features.Item.Commands.AddItem
         public int CantidadItem { get; set; }
         public string UnidadMedidaItem { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

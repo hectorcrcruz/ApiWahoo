@@ -11,8 +11,8 @@ namespace WahooApplication.Features.Permiso.Commands.UpPermiso
     {
         public int Id { get; set; }
         public string DescripcionPermiso { get; set; }
-        public string UsuarioUp { get; set; }
+        public string? UsuarioUp { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

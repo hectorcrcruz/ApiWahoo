@@ -13,7 +13,7 @@ namespace WahooApplication.Features.Ciudad.Commands.UpCiudad
         public string NombreCiudad { get; set; }
         public int DepartamentoId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

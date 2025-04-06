@@ -27,8 +27,8 @@ namespace WahooApplication.Features.Usuario.Commands.UpUsuario
         public string CausacionPagos { get; set; }
         public int RolId { get; set; }
         public int TipoIdentificacionId { get; set; }
-        public string UsuarioUp { get; set; }
+        public string? UsuarioUp { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

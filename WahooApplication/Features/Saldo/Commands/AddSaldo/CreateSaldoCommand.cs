@@ -14,8 +14,8 @@ namespace WahooApplication.Features.Saldo.Commands.AddSaldo
         public decimal SaldoFinal { get; set; }
         public decimal SaldoActual { get; set; }
         public int UsuarioId { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

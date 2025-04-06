@@ -20,6 +20,12 @@ C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Options.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Primitives.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Identity.Client.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.Abstractions.dll
@@ -35,12 +41,14 @@ C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Drawing.Common.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Memory.Data.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Runtime.Caching.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Security.Permissions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Text.Encodings.Web.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\System.Windows.Extensions.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -53,6 +61,7 @@ C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\WahooApplication.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\PubTmp\Out\WahooDomain.dll

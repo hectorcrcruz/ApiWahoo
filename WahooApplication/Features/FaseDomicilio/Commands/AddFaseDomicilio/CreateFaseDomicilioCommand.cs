@@ -12,7 +12,7 @@ namespace WahooApplication.Features.FaseDomicilio.Commands.AddFaseDomicilio
         public int Id { get; set; }
         public string DescripcionFaseDomicilio { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

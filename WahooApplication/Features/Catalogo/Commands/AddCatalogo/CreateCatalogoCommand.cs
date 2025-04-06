@@ -16,7 +16,7 @@ namespace WahooApplication.Features.Catalogo.Commands.AddCatalogo
         public int ItemId { get; set; }
         public int? EntidadId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

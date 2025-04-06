@@ -14,7 +14,7 @@ namespace WahooApplication.Features.Entidad.Commands.UpEntidad
         public int TipoEntidadId { get; set; }
         public int MedioPagoId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

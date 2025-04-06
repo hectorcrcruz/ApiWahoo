@@ -22,7 +22,7 @@ namespace WahooApplication.Features.Domicilio.Commands.AddDomicilio
         public int? AceptaDomiciliario { get; set; }
         public bool? DomicilioExitoso { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

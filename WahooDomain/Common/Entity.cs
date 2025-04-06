@@ -13,9 +13,9 @@ namespace WahooDomain.Common
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd{ get; set; }
+        public string? UsuarioAdd{ get; set; }
         public string? UsuarioUp { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
         public DateTime? FechaUp { get; set;}
 
     }

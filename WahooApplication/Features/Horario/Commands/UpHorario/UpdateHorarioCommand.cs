@@ -18,7 +18,7 @@ namespace WahooApplication.Features.Horario.Commands.UpHorario
         public int UsuarioId { get; set; }
         public int DiaId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

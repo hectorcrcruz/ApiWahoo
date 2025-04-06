@@ -15,7 +15,7 @@ namespace WahooApplication.Features.Catalogo.Commands.UpCatalogo
         public int ItemId { get; set; }
         public int? EntidadId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

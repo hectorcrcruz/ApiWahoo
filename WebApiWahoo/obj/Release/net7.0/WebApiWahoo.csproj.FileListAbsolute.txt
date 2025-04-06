@@ -87,3 +87,12 @@ C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\obj\Release\net7.0\ref\WebApiWahoo.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
 C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Azure.Security.KeyVault.Secrets.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\System.Text.Encodings.Web.dll
+C:\Users\Hecthor Cruz\Documents\Proyectos\AppWahoo\Publicaciones\API\WebApiWahoo\bin\Release\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll

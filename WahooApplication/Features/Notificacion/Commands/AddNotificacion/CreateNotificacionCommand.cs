@@ -13,8 +13,8 @@ namespace WahooApplication.Features.Notificacion.Commands.AddNotificacion
         public string DescripcionNotificacion { get; set; }
         public bool Enviada { get; set; }
         public int UsuarioId { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

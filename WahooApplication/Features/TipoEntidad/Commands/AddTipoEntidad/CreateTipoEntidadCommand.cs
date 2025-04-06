@@ -11,9 +11,9 @@ namespace WahooApplication.Features.TipoEntidad.Commands.AddTipoEntidad
     {
         public int Id { get; set; }
         public string DescripcionTipoEntidad { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
 
     }
 }

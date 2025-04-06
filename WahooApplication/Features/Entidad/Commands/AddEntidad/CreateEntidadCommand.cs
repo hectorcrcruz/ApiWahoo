@@ -15,7 +15,7 @@ namespace WahooApplication.Features.Entidad.Commands.AddEntidad
         public int TipoEntidadId { get; set; }
         public int MedioPagoId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

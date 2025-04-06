@@ -16,8 +16,8 @@ namespace WahooApplication.Features.Producto.Commands.AddProducto
         public decimal ValorProducto { get; set; }
         public byte ImagenProducto { get; set; }
         public int CategoriaProductoId { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

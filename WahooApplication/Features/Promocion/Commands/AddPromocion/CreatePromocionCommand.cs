@@ -17,8 +17,8 @@ namespace WahooApplication.Features.Promocion.Commands.AddPromocion
         public byte ImagenPromocion { get; set; }
         public string CodigoPromocional { get; set; }
         public int TipoPromocionId { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

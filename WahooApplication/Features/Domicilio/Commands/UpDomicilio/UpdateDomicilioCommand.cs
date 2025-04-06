@@ -20,7 +20,7 @@ namespace WahooApplication.Features.Domicilio.Commands.UpDomicilio
         public int? AceptaDomiciliario { get; set; }
         public bool? DomicilioExitoso { get; set; }
         public int Estado { get; set; }
-        public string UsuarioUp { get; set; }
-        public DateTime FechaUp { get; set; }
+        public string? UsuarioUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

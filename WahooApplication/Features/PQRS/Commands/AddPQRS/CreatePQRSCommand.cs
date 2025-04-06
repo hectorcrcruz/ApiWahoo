@@ -14,8 +14,8 @@ namespace WahooApplication.Features.PQRS.Commands.AddPQRS
         public string DescripcionPQRS { get; set; }
         public int UsuarioId { get; set; }
         public int TipoPQRSId { get; set; }
-        public string UsuarioAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }

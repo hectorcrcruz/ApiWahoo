@@ -16,8 +16,8 @@ namespace WahooApplication.Features.Chat.Commands.AddChat
         public int Receptor { get; set; }
         public byte Documento { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
 
     }
 }

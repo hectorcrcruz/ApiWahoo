@@ -13,8 +13,8 @@ namespace WahooApplication.Features.PQRS.Commands.UpPQRS
         public string DescripcionPQRS { get; set; }
         public int UsuarioId { get; set; }
         public int TipoPQRSId { get; set; }
-        public string UsuarioUp { get; set; }
+        public string? UsuarioUp { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

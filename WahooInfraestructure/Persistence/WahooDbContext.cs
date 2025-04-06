@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,25 +22,25 @@ namespace WahooInfraestructure.Persistence
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        if (entry.Entity.FechaAdd.ToString() == "")
-                        {
+                        //if (entry.Entity.FechaAdd.ToString() == "" || entry.Entity.FechaAdd == null)
+                        //{
                             entry.Entity.FechaAdd = DateTime.Now;
-                        }
-                        if (entry.Entity.UsuarioAdd.ToString() == "")
-                        {
+                        //}
+                        //if (entry.Entity.UsuarioAdd.ToString() == "" || entry.Entity.UsuarioAdd == null)
+                        //{
                             entry.Entity.UsuarioAdd = "Sistema";
-                        }
+                        //}
 
                         break;
                     case EntityState.Modified:
-                        if (entry.Entity.FechaUp.ToString() == "")
-                        {
+                        //if (entry.Entity.FechaUp.ToString() == "" || entry.Entity.FechaUp == null)
+                        //{
                             entry.Entity.FechaUp = DateTime.Now;
-                        }
-                        if (entry.Entity.FechaUp.ToString() == "")
-                        {
+                        //}
+                        //if (entry.Entity.UsuarioUp.ToString() == "" || entry.Entity.UsuarioUp == null)
+                        //{
                             entry.Entity.UsuarioUp = "Sistema";
-                        }
+                        //}
 
                         break;
                 }

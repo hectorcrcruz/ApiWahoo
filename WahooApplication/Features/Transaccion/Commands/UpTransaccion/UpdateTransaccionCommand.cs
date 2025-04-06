@@ -15,8 +15,8 @@ namespace WahooApplication.Features.Transaccion.Commands.UpTransaccion
         public int EntidadId { get; set; }
         public int DomicilioId { get; set; }
         public string DescripcionAdicional { get; set; }
-        public string UsuarioUp { get; set; }
+        public string? UsuarioUp { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaUp { get; set; }
+        public DateTime? FechaUp { get; set; }
     }
 }

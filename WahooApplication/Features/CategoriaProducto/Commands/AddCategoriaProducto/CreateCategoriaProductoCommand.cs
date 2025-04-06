@@ -12,8 +12,8 @@ namespace WahooApplication.Features.CategoriaProducto.Commands.AddCategoriaProdu
         public int Id { get; set; }
         public string DescripcionCategoriaProducto { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
 
     }
 }

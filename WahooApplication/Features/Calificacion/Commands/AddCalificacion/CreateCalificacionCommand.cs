@@ -16,7 +16,7 @@ namespace WahooApplication.Features.Calificacion.Commands.CreateCalificacion
         public int CriterioEvaluacionId { get; set; }
         public int UsuarioId { get; set; }
         public int Estado { get; set; }
-        public string UsuarioAdd { get; set; }
-        public DateTime FechaAdd { get; set; }
+        public string? UsuarioAdd { get; set; }
+        public DateTime? FechaAdd { get; set; }
     }
 }
