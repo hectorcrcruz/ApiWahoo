@@ -44,6 +44,7 @@ using WahooApplication.Features.Notificacion.Commands.AddNotificacion;
 using WahooApplication.Features.Notificacion.Commands.UpNotificacion;
 using WahooApplication.Features.Pais.Commands.AddPais;
 using WahooApplication.Features.Pais.Commands.UpPais;
+using WahooApplication.Features.Parametrizacion.Commands.AddParametrizacion;
 using WahooApplication.Features.ParametroEvaluacion.Commands.AddParametroEvaluacion;
 using WahooApplication.Features.ParametroEvaluacion.Commands.UpParametroEvaluacion;
 using WahooApplication.Features.Permiso.Commands.AddPermiso;
@@ -226,6 +227,10 @@ namespace WahooApplication.Mappings
             CreateMap<CreateUsuarioCommand, Usuario>();
             CreateMap<UpdateUsuarioCommand, Usuario>();
             CreateMap<Usuario, UsuarioModel>();
+
+            CreateMap<CreateParametrizacionCommand, Parametrizacion>();
+            CreateMap<CreateParametrizacionCommand, Parametrizacion>();
+            CreateMap<Parametrizacion, ParametrizacionModel>();
         }
     }
 }

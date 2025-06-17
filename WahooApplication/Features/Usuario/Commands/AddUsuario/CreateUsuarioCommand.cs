@@ -12,7 +12,7 @@ namespace WahooApplication.Features.Usuario.Commands.AddUsuario
         public int Id { get; set; }
         public string NombreUsuario { get; set; }
         public string ApellidoUsuario { get; set; }
-        public int TelefonoUsuario { get; set; }
+        public string TelefonoUsuario { get; set; }
         public DateTime ExpedicionCedula { get; set; }
         public string DireccionUsuario { get; set; }
         public string PlacaMoto { get; set; }
@@ -27,6 +27,7 @@ namespace WahooApplication.Features.Usuario.Commands.AddUsuario
         public string CausacionPagos { get; set; }
         public int RolId { get; set; }
         public int TipoIdentificacionId { get; set; }
+        public string ImagenUsuario { get; set; }
         public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
         public DateTime? FechaAdd { get; set; }

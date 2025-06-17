@@ -11,7 +11,6 @@ namespace WahooApplication.Features.Modulo.Commands.AddMdulo
     {
         public int Id { get; set; }
         public string DescripcionModulo { get; set; }
-        public int PermisoId { get; set; }
         public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
         public DateTime? FechaAdd { get; set; }

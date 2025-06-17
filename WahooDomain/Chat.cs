@@ -10,9 +10,9 @@ namespace WahooDomain
     public class Chat : Entity
     {
         public string Mensaje { get; set; }
-        public byte DocumentoSoporte { get; set; }
+        public string DocumentoSoporte { get; set; }
         public int Emisor { get; set; }
         public int Receptor { get; set; }
-        public byte Documento { get; set; }    
+        public string Documento { get; set; }    
     }
 }

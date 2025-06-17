@@ -46,6 +46,7 @@ namespace WahooApplication.Features.Usuario.Commands.UpUsuario
                 VerifiData.RolId = request.RolId;
                 VerifiData.TipoIdentificacionId = request.TipoIdentificacionId;
                 VerifiData.Estado = request.Estado;
+                VerifiData.ImagenUsuario = request.ImagenUsuario;
                 VerifiData.UsuarioUp = request.UsuarioUp;
                 VerifiData.FechaUp = request.FechaUp;
 

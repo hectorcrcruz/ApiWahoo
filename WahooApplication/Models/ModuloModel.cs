@@ -10,6 +10,5 @@ namespace WahooApplication.Models
     public class ModuloModel :CommonModel
     {
         public string DescripcionModulo { get; set; }
-        public int PermisoId { get; set; }
     }
 }

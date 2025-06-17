@@ -36,7 +36,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -49,7 +49,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UsuarioId")
@@ -87,7 +86,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -97,7 +96,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -108,6 +106,32 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("ItemId");
 
                     b.ToTable("Catalogos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionCatalogo = "Hamburguesa",
+                            Estado = 2,
+                            ItemId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionCatalogo = "Pescado a la marinera",
+                            Estado = 2,
+                            ItemId = 5,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionCatalogo = "Langosta",
+                            Estado = 2,
+                            ItemId = 3,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.CategoriaLog", b =>
@@ -125,14 +149,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -141,6 +164,29 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoriaLogs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionCategoriaLog = "Error",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionCategoriaLog = "Aviso",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionCategoriaLog = "Alerta",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.CategoriaProducto", b =>
@@ -158,14 +204,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -174,6 +219,50 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoriaProductos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionCategoriaProducto = "Restaurante",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionCategoriaProducto = "Hogar",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionCategoriaProducto = "Deporte",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionCategoriaProducto = "Turismo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionCategoriaProducto = "Construccion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DescripcionCategoriaProducto = "Tecnologia",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Chat", b =>
@@ -184,11 +273,13 @@ namespace WahooInfraestructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<byte>("Documento")
-                        .HasColumnType("tinyint");
+                    b.Property<string>("Documento")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("DocumentoSoporte")
-                        .HasColumnType("tinyint");
+                    b.Property<string>("DocumentoSoporte")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Emisor")
                         .HasColumnType("int");
@@ -196,7 +287,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -210,7 +301,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -219,6 +309,30 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Chats");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Documento = "document.pdf",
+                            DocumentoSoporte = "document.pdf",
+                            Emisor = 1,
+                            Estado = 2,
+                            Mensaje = "Hola buen dia",
+                            Receptor = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Documento = "document.jpg",
+                            DocumentoSoporte = "document.jpg",
+                            Emisor = 2,
+                            Estado = 2,
+                            Mensaje = "Hola buen dia",
+                            Receptor = 1,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Ciudad", b =>
@@ -235,7 +349,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -246,7 +360,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -257,6 +370,32 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("DepartamentoId");
 
                     b.ToTable("Ciudades");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DepartamentoId = 1,
+                            Estado = 2,
+                            NombreCiudad = "San Andres",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DepartamentoId = 2,
+                            Estado = 2,
+                            NombreCiudad = "Bogota",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DepartamentoId = 3,
+                            Estado = 2,
+                            NombreCiudad = "Tunja",
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.CriterioEvaluacion", b =>
@@ -274,14 +413,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -290,6 +428,50 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CriterioEvaluaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionCriterioEvaluacion = "Excelente",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionCriterioEvaluacion = "Bueno",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionCriterioEvaluacion = "Aceptable",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionCriterioEvaluacion = "Regular",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionCriterioEvaluacion = "Malo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DescripcionCriterioEvaluacion = "Pesimo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Departamento", b =>
@@ -303,7 +485,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -317,7 +499,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -328,6 +509,32 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("PaisId");
 
                     b.ToTable("Departamentos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Estado = 2,
+                            NombreDepartamento = "San Andres Providencia y Santa Catalina",
+                            PaisId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Estado = 2,
+                            NombreDepartamento = "Cundinamarca",
+                            PaisId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Estado = 2,
+                            NombreDepartamento = "Boyaca",
+                            PaisId = 1,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Dia", b =>
@@ -345,14 +552,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -361,6 +567,57 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Dias");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionDiaLaboral = "Lunes",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionDiaLaboral = "Martes",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionDiaLaboral = "Miercoles",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionDiaLaboral = "Jueves",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionDiaLaboral = "Viernes",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DescripcionDiaLaboral = "Sabado",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DescripcionDiaLaboral = "Domingo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Domicilio", b =>
@@ -396,7 +653,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<DateTime?>("FechaAceptaEntidad")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaEntrega")
@@ -409,7 +666,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UsuarioId")
@@ -427,6 +683,56 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Domicilios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AceptaDomiciliario = 1,
+                            AceptaEntidad = 1,
+                            DescripcionDomicilio = "Domicilio - Hamburguesa",
+                            DomicilioExitoso = true,
+                            Estado = 2,
+                            FaseDomicilioId = 1,
+                            FechaAceptaDomiciliario = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaAceptaEntidad = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaEntrega = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ProductoId = 1,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AceptaDomiciliario = 1,
+                            AceptaEntidad = 1,
+                            DescripcionDomicilio = "Domicilio - Pescado a la marinera",
+                            DomicilioExitoso = true,
+                            Estado = 2,
+                            FaseDomicilioId = 5,
+                            FechaAceptaDomiciliario = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaAceptaEntidad = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaEntrega = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ProductoId = 1,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AceptaDomiciliario = 1,
+                            AceptaEntidad = 1,
+                            DescripcionDomicilio = "Domicilio - Langosta",
+                            DomicilioExitoso = true,
+                            Estado = 2,
+                            FaseDomicilioId = 3,
+                            FechaAceptaDomiciliario = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaAceptaEntidad = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaEntrega = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ProductoId = 1,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 3
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Entidad", b =>
@@ -444,7 +750,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -457,7 +763,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -470,6 +775,35 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("TipoEntidadId");
 
                     b.ToTable("Entidades");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionEntidad = "Presto",
+                            Estado = 2,
+                            MedioPagoId = 1,
+                            TipoEntidadId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionEntidad = "Sandwich Cubano",
+                            Estado = 2,
+                            MedioPagoId = 2,
+                            TipoEntidadId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionEntidad = "Juan Valdez",
+                            Estado = 2,
+                            MedioPagoId = 3,
+                            TipoEntidadId = 3,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Estado", b =>
@@ -487,14 +821,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -503,6 +836,36 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Estados");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionEstado = "Activo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionEstado = "Inactivo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionEstado = "Pagado",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionEstado = "Pendiente Pago",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.FaseDomicilio", b =>
@@ -520,14 +883,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -536,6 +898,57 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FaseDomicilios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionFaseDomicilio = "Domicilio Creado",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionFaseDomicilio = "Domicilio en Proceso",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionFaseDomicilio = "Domicilio Cancelado",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionFaseDomicilio = "Domicilio en camino",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionFaseDomicilio = "Domicilio Pendiente",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DescripcionFaseDomicilio = "Domicilio Aceptado",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DescripcionFaseDomicilio = "Domicilio Recibido",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Horario", b =>
@@ -560,7 +973,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -579,7 +992,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UsuarioId")
@@ -595,6 +1007,60 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Horarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionHorario = "Horario Mañana",
+                            DiaId = 1,
+                            DiasLaborales = "Lunes",
+                            Estado = 2,
+                            FranjaHorario = "Mañana",
+                            HoraFin = "12:00",
+                            HoraInicio = "01:00",
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionHorario = "Horario Tarde",
+                            DiaId = 1,
+                            DiasLaborales = "Lunes",
+                            Estado = 2,
+                            FranjaHorario = "Tarde",
+                            HoraFin = "18:00",
+                            HoraInicio = "12:00",
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionHorario = "Horario Dia",
+                            DiaId = 1,
+                            DiasLaborales = "Lunes",
+                            Estado = 2,
+                            FranjaHorario = "Dia",
+                            HoraFin = "18:00",
+                            HoraInicio = "07:00",
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 2
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionHorario = "Horario Nocturno",
+                            DiaId = 1,
+                            DiasLaborales = "Lunes",
+                            Estado = 2,
+                            FranjaHorario = "Noche",
+                            HoraFin = "06:00",
+                            HoraInicio = "18:00",
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 3
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Item", b =>
@@ -615,7 +1081,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -626,7 +1092,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -635,6 +1100,62 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Items");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CantidadItem = 500,
+                            DescripcionItem = "Cebolla",
+                            Estado = 2,
+                            UnidadMedidaItem = "Miligramos",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CantidadItem = 2,
+                            DescripcionItem = "Queso",
+                            Estado = 2,
+                            UnidadMedidaItem = "Libras",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CantidadItem = 50,
+                            DescripcionItem = "Especies",
+                            Estado = 2,
+                            UnidadMedidaItem = "Miligramos",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CantidadItem = 1,
+                            DescripcionItem = "Papas",
+                            Estado = 2,
+                            UnidadMedidaItem = "Kilo",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CantidadItem = 100,
+                            DescripcionItem = "Pescado",
+                            Estado = 2,
+                            UnidadMedidaItem = "Gramos",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CantidadItem = 50,
+                            DescripcionItem = "Salsa de tomate",
+                            Estado = 2,
+                            UnidadMedidaItem = "Miligramos",
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Log", b =>
@@ -655,14 +1176,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -673,6 +1193,32 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("CategoriaLogId");
 
                     b.ToTable("Logs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoriaLogId = 1,
+                            DescripcionLog = "Error al guardar la infromacion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoriaLogId = 1,
+                            DescripcionLog = "Error al asignar el domicilio",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoriaLogId = 2,
+                            DescripcionLog = "Se debe seleccionar un ingrediente para el pedido",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.MedioPago", b =>
@@ -690,14 +1236,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -706,6 +1251,50 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MedioPagos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionMedioPago = "Efectivo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionMedioPago = "Tarjeta de credito",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionMedioPago = "Tarjeta debito",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionMedioPago = "PSE",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionMedioPago = "Nequi",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DescripcionMedioPago = "Daviplata",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Modulo", b =>
@@ -723,17 +1312,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("PermisoId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -741,9 +1326,254 @@ namespace WahooInfraestructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PermisoId");
-
                     b.ToTable("Modulos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionModulo = "Calificaciones",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionModulo = "Catalogo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionModulo = "Categoria Log",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionModulo = "Categoria Producto",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionModulo = "Chat",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DescripcionModulo = "Ciudad",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DescripcionModulo = "Criterio Evaluacion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            DescripcionModulo = "Departamentos",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            DescripcionModulo = "Dias",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            DescripcionModulo = "Domicilio",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            DescripcionModulo = "Entidad",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            DescripcionModulo = "Estado",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            DescripcionModulo = "Fase Domicilio",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            DescripcionModulo = "Horarios",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            DescripcionModulo = "Item",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            DescripcionModulo = "Logs",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            DescripcionModulo = "Medios de Pago",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            DescripcionModulo = "Modulos",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            DescripcionModulo = "Notificaciones",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            DescripcionModulo = "Pais",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            DescripcionModulo = "Parametro Evaluacion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            DescripcionModulo = "Permisos",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            DescripcionModulo = "PQRS",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            DescripcionModulo = "Productos",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            DescripcionModulo = "Promociones",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            DescripcionModulo = "Roles",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            DescripcionModulo = "Saldos",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            DescripcionModulo = "Tiempo Fase",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            DescripcionModulo = "Tipo Entidad",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            DescripcionModulo = "Tipo Identificacion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            DescripcionModulo = "Tipo PQRS",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            DescripcionModulo = "Tipo Promocion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            DescripcionModulo = "Tipo Transaccion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            DescripcionModulo = "Transacciones",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            DescripcionModulo = "Usuarios",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Notificacion", b =>
@@ -764,14 +1594,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UsuarioId")
@@ -785,6 +1614,35 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Notificaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionNotificacion = "Domicilio - Creacion de Pedido",
+                            Enviada = false,
+                            Estado = 2,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionNotificacion = "Domicilio - Pedido va en camino",
+                            Enviada = true,
+                            Estado = 2,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionNotificacion = "Domicilio - Pedido entregado",
+                            Enviada = false,
+                            Estado = 2,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 1
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.PQRS", b =>
@@ -802,7 +1660,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -812,7 +1670,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UsuarioId")
@@ -828,6 +1685,35 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("PQRs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionPQRS = "Pedido retrasado segun estimacion de entrega",
+                            Estado = 2,
+                            TipoPQRSId = 1,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 3
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionPQRS = "Pedido con mala calidad en el producto",
+                            Estado = 2,
+                            TipoPQRSId = 2,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionPQRS = "Pedido con direccion errada",
+                            Estado = 2,
+                            TipoPQRSId = 3,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 3
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Pais", b =>
@@ -841,7 +1727,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -852,7 +1738,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -861,6 +1746,169 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Paises");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Estado = 2,
+                            FechaAdd = new DateTime(2025, 6, 17, 17, 41, 50, 504, DateTimeKind.Local).AddTicks(4670),
+                            NombrePais = "Colombia",
+                            UsuarioAdd = "Sistema"
+                        });
+                });
+
+            modelBuilder.Entity("WahooDomain.Parametrizacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ColorBotonActualizar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorBotonCrear")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorBotonEliminar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorPrimario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorSecundario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorTerciario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorTexto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Estado")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaAdd")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaUp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Footer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreApp")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TextoCuaternario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TextoPrimario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TextoSecundario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TextoTerciario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoLetra")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UsuarioAdd")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UsuarioUp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Parametrizaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ColorBotonActualizar = "#720094",
+                            ColorBotonCrear = "#cb2c7f",
+                            ColorBotonEliminar = "#cc1329",
+                            ColorPrimario = "#733089",
+                            ColorSecundario = "#ebbaf7",
+                            ColorTerciario = "#f9e5ff",
+                            ColorTexto = "",
+                            Estado = 2,
+                            Footer = "Todos los derechos reservados",
+                            Logo = "",
+                            NombreApp = "Wahoo",
+                            TextoCuaternario = "Publicidad",
+                            TextoPrimario = "2025",
+                            TextoSecundario = "SofToolSolution",
+                            TextoTerciario = "Promociones y descuentos especiales",
+                            TipoLetra = "Agency FB",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ColorBotonActualizar = "#720094",
+                            ColorBotonCrear = "#cb2c7f",
+                            ColorBotonEliminar = "#cc1329",
+                            ColorPrimario = "#733089",
+                            ColorSecundario = "#ebbaf7",
+                            ColorTerciario = "#f9e5ff",
+                            ColorTexto = "",
+                            Estado = 2,
+                            Footer = "Todos los derechos reservados",
+                            Logo = "",
+                            NombreApp = "Trueque",
+                            TextoCuaternario = "Publicidad",
+                            TextoPrimario = "2025",
+                            TextoSecundario = "SofToolSolution",
+                            TextoTerciario = "Promociones y descuentos especiales",
+                            TipoLetra = "Agency FB",
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ColorBotonActualizar = "#720094",
+                            ColorBotonCrear = "#cb2c7f",
+                            ColorBotonEliminar = "#cc1329",
+                            ColorPrimario = "#733089",
+                            ColorSecundario = "#ebbaf7",
+                            ColorTerciario = "#f9e5ff",
+                            ColorTexto = "",
+                            Estado = 2,
+                            Footer = "Todos los derechos reservados",
+                            Logo = "",
+                            NombreApp = "DomiYa",
+                            TextoCuaternario = "Publicidad",
+                            TextoPrimario = "2025",
+                            TextoSecundario = "SofToolSolution",
+                            TextoTerciario = "Promociones y descuentos especiales",
+                            TipoLetra = "Agency FB",
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.ParametroEvaluacion", b =>
@@ -878,14 +1926,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -894,6 +1941,50 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ParametroEvaluaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionParametro = "¿Que tan satisfecho estas con el servicio ofrecido?",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionParametro = "¿Recomendarias el servicio?",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionParametro = "¿Estas conforme con la calidad del pedido?",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionParametro = "¿Los tiempos de entrega son razonables?",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionParametro = "¿El servicios se entrega segun lo pedido?",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DescripcionParametro = "¿El domciliario ha sido gentil y respetuoso?",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Permiso", b =>
@@ -911,14 +2002,16 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("ModuloId")
+                        .HasColumnType("int");
+
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -926,7 +2019,819 @@ namespace WahooInfraestructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ModuloId");
+
                     b.ToTable("Permisos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionPermiso = "Crear Calificacion",
+                            Estado = 2,
+                            ModuloId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionPermiso = "Actualizar Calificacion",
+                            Estado = 2,
+                            ModuloId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionPermiso = "Ver Calififaciones",
+                            Estado = 2,
+                            ModuloId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionPermiso = "Crear Catalogo",
+                            Estado = 2,
+                            ModuloId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionPermiso = "Actualizar Catalogos",
+                            Estado = 2,
+                            ModuloId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DescripcionPermiso = "Ver Calogos",
+                            Estado = 2,
+                            ModuloId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DescripcionPermiso = "Crear Categoria Logs",
+                            Estado = 2,
+                            ModuloId = 3,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            DescripcionPermiso = "Actualizar Categoria Logs",
+                            Estado = 2,
+                            ModuloId = 3,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            DescripcionPermiso = "Ver Calegorias Logs",
+                            Estado = 2,
+                            ModuloId = 3,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            DescripcionPermiso = "Crear Categoria Productos",
+                            Estado = 2,
+                            ModuloId = 4,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            DescripcionPermiso = "Actualizar Categoria Productos",
+                            Estado = 2,
+                            ModuloId = 4,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            DescripcionPermiso = "Ver Calegorias Producto",
+                            Estado = 2,
+                            ModuloId = 4,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            DescripcionPermiso = "Crear Chats",
+                            Estado = 2,
+                            ModuloId = 5,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            DescripcionPermiso = "Actualizar Chats",
+                            Estado = 2,
+                            ModuloId = 5,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            DescripcionPermiso = "Ver Chats",
+                            Estado = 2,
+                            ModuloId = 5,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            DescripcionPermiso = "Crear Ciudades",
+                            Estado = 2,
+                            ModuloId = 6,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            DescripcionPermiso = "Actualizar Ciudades",
+                            Estado = 2,
+                            ModuloId = 6,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            DescripcionPermiso = "Ver Ciudades",
+                            Estado = 2,
+                            ModuloId = 6,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            DescripcionPermiso = "Crear Criterio Evaluacion",
+                            Estado = 2,
+                            ModuloId = 7,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            DescripcionPermiso = "Actualizar Criterio Evaluacion",
+                            Estado = 2,
+                            ModuloId = 7,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            DescripcionPermiso = "Ver Criterios Evaluacion",
+                            Estado = 2,
+                            ModuloId = 7,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            DescripcionPermiso = "Crear Departamentos",
+                            Estado = 2,
+                            ModuloId = 8,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            DescripcionPermiso = "Actualizar Departamentos",
+                            Estado = 2,
+                            ModuloId = 8,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            DescripcionPermiso = "Ver Departamentos",
+                            Estado = 2,
+                            ModuloId = 8,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            DescripcionPermiso = "Crear Dias",
+                            Estado = 2,
+                            ModuloId = 9,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            DescripcionPermiso = "Actualizar Dias",
+                            Estado = 2,
+                            ModuloId = 9,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            DescripcionPermiso = "Ver Dias",
+                            Estado = 2,
+                            ModuloId = 9,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            DescripcionPermiso = "Crear Domicilios",
+                            Estado = 2,
+                            ModuloId = 10,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            DescripcionPermiso = "Actualizar Domicilios",
+                            Estado = 2,
+                            ModuloId = 10,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            DescripcionPermiso = "Ver Domicilios",
+                            Estado = 2,
+                            ModuloId = 10,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            DescripcionPermiso = "Crear Entidades",
+                            Estado = 2,
+                            ModuloId = 11,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            DescripcionPermiso = "Actualizar Entidades",
+                            Estado = 2,
+                            ModuloId = 11,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            DescripcionPermiso = "Ver Entidades",
+                            Estado = 2,
+                            ModuloId = 11,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            DescripcionPermiso = "Crear Estados",
+                            Estado = 2,
+                            ModuloId = 12,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            DescripcionPermiso = "Actualizar Estados",
+                            Estado = 2,
+                            ModuloId = 12,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            DescripcionPermiso = "Ver Estados",
+                            Estado = 2,
+                            ModuloId = 12,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            DescripcionPermiso = "Crear Fase Domicilios",
+                            Estado = 2,
+                            ModuloId = 13,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            DescripcionPermiso = "Actualizar Fase Domicilios",
+                            Estado = 2,
+                            ModuloId = 13,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            DescripcionPermiso = "Ver Fases Domicilio",
+                            Estado = 2,
+                            ModuloId = 13,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            DescripcionPermiso = "Crear Horarios",
+                            Estado = 2,
+                            ModuloId = 14,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            DescripcionPermiso = "Actualizar Horarios",
+                            Estado = 2,
+                            ModuloId = 14,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            DescripcionPermiso = "Ver Horarios",
+                            Estado = 2,
+                            ModuloId = 14,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            DescripcionPermiso = "Crear Items",
+                            Estado = 2,
+                            ModuloId = 15,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            DescripcionPermiso = "Actualizar Items",
+                            Estado = 2,
+                            ModuloId = 15,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            DescripcionPermiso = "Ver Items",
+                            Estado = 2,
+                            ModuloId = 15,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            DescripcionPermiso = "Ver Logs",
+                            Estado = 2,
+                            ModuloId = 16,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            DescripcionPermiso = "Crear Medio de Pago",
+                            Estado = 2,
+                            ModuloId = 17,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            DescripcionPermiso = "Actualizar Medio Pago",
+                            Estado = 2,
+                            ModuloId = 17,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            DescripcionPermiso = "Ver Medios de Pago",
+                            Estado = 2,
+                            ModuloId = 17,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            DescripcionPermiso = "Crear Modulos",
+                            Estado = 2,
+                            ModuloId = 18,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            DescripcionPermiso = "Actualizar Modulos",
+                            Estado = 2,
+                            ModuloId = 18,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            DescripcionPermiso = "Ver Modulos",
+                            Estado = 2,
+                            ModuloId = 18,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            DescripcionPermiso = "Crear Notificaciones",
+                            Estado = 2,
+                            ModuloId = 19,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            DescripcionPermiso = "Actualizar Notificaciones",
+                            Estado = 2,
+                            ModuloId = 19,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            DescripcionPermiso = "Ver Notificaciones",
+                            Estado = 2,
+                            ModuloId = 19,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            DescripcionPermiso = "Ver Paises",
+                            Estado = 2,
+                            ModuloId = 20,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            DescripcionPermiso = "Crear Parametro Evluacion",
+                            Estado = 2,
+                            ModuloId = 21,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            DescripcionPermiso = "Actualizar Parametro Evluacion",
+                            Estado = 2,
+                            ModuloId = 21,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            DescripcionPermiso = "Ver Parametros Evluacion",
+                            Estado = 2,
+                            ModuloId = 21,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            DescripcionPermiso = "Crear Permisos",
+                            Estado = 2,
+                            ModuloId = 22,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            DescripcionPermiso = "Actualizar Permisos",
+                            Estado = 2,
+                            ModuloId = 22,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            DescripcionPermiso = "Ver Permisos",
+                            Estado = 2,
+                            ModuloId = 22,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            DescripcionPermiso = "Crear PQRS",
+                            Estado = 2,
+                            ModuloId = 23,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            DescripcionPermiso = "Actualizar PQRS",
+                            Estado = 2,
+                            ModuloId = 23,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            DescripcionPermiso = "Ver PQRS",
+                            Estado = 2,
+                            ModuloId = 23,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            DescripcionPermiso = "Crear Productos",
+                            Estado = 2,
+                            ModuloId = 24,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            DescripcionPermiso = "Actualizar Productos",
+                            Estado = 2,
+                            ModuloId = 24,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            DescripcionPermiso = "Ver Productos",
+                            Estado = 2,
+                            ModuloId = 24,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            DescripcionPermiso = "Crear Promociones",
+                            Estado = 2,
+                            ModuloId = 25,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            DescripcionPermiso = "Actualizar Promociones",
+                            Estado = 2,
+                            ModuloId = 25,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            DescripcionPermiso = "Ver Promociones",
+                            Estado = 2,
+                            ModuloId = 25,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            DescripcionPermiso = "Crear Rol",
+                            Estado = 2,
+                            ModuloId = 26,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 73,
+                            DescripcionPermiso = "Actualizar Rol",
+                            Estado = 2,
+                            ModuloId = 26,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            DescripcionPermiso = "Ver Rol",
+                            Estado = 2,
+                            ModuloId = 26,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 75,
+                            DescripcionPermiso = "Crear Saldo",
+                            Estado = 2,
+                            ModuloId = 27,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 76,
+                            DescripcionPermiso = "Actualizar Saldo",
+                            Estado = 2,
+                            ModuloId = 27,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 78,
+                            DescripcionPermiso = "Ver Saldos",
+                            Estado = 2,
+                            ModuloId = 27,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 79,
+                            DescripcionPermiso = "Crear Tiempo Fases",
+                            Estado = 2,
+                            ModuloId = 28,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            DescripcionPermiso = "Actualizar Tiempo Fases",
+                            Estado = 2,
+                            ModuloId = 28,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            DescripcionPermiso = "Ver Tiempo Fases",
+                            Estado = 2,
+                            ModuloId = 28,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            DescripcionPermiso = "Crear Tipo Entidad",
+                            Estado = 2,
+                            ModuloId = 29,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            DescripcionPermiso = "Actualizar Tipo Entidad",
+                            Estado = 2,
+                            ModuloId = 29,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            DescripcionPermiso = "Ver Tipo Entidad",
+                            Estado = 2,
+                            ModuloId = 29,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            DescripcionPermiso = "Crear Tipo Identificaciones",
+                            Estado = 2,
+                            ModuloId = 30,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            DescripcionPermiso = "Actualizar Tipo Identificaciones",
+                            Estado = 2,
+                            ModuloId = 30,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            DescripcionPermiso = "Ver Tipo Identificaciones",
+                            Estado = 2,
+                            ModuloId = 30,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            DescripcionPermiso = "Crear Tipo Promociones",
+                            Estado = 2,
+                            ModuloId = 31,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            DescripcionPermiso = "Actualizar Tipo Promociones",
+                            Estado = 2,
+                            ModuloId = 31,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            DescripcionPermiso = "Ver Tipo Promociones",
+                            Estado = 2,
+                            ModuloId = 31,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            DescripcionPermiso = "Crear Tipo TipoPQRS",
+                            Estado = 2,
+                            ModuloId = 32,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            DescripcionPermiso = "Actualizar Tipo TipoPQRS",
+                            Estado = 2,
+                            ModuloId = 32,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            DescripcionPermiso = "Ver Tipo TipoPQRS",
+                            Estado = 2,
+                            ModuloId = 32,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            DescripcionPermiso = "Crear Tipo Transacciones",
+                            Estado = 2,
+                            ModuloId = 33,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            DescripcionPermiso = "Actualizar Tipo Transacciones",
+                            Estado = 2,
+                            ModuloId = 33,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            DescripcionPermiso = "Ver Tipo Transacciones",
+                            Estado = 2,
+                            ModuloId = 33,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            DescripcionPermiso = "Crear Transacciones",
+                            Estado = 2,
+                            ModuloId = 34,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            DescripcionPermiso = "Actualizar Transacciones",
+                            Estado = 2,
+                            ModuloId = 34,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            DescripcionPermiso = "Ver Transacciones",
+                            Estado = 2,
+                            ModuloId = 34,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            DescripcionPermiso = "Crear Usuario",
+                            Estado = 2,
+                            ModuloId = 35,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            DescripcionPermiso = "Actualizar Usuario",
+                            Estado = 2,
+                            ModuloId = 35,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            DescripcionPermiso = "Ver Usuarios",
+                            Estado = 2,
+                            ModuloId = 35,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Producto", b =>
@@ -944,20 +2849,24 @@ namespace WahooInfraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DetalleProducto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
-                    b.Property<byte>("ImagenProducto")
-                        .HasColumnType("tinyint");
+                    b.Property<string>("ImagenProducto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -974,6 +2883,44 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("CategoriaProductoId");
 
                     b.ToTable("Productos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoriaProductoId = 1,
+                            DescripcionProducto = "Langosta a las finas hierbas",
+                            DetalleProducto = "Langosta de 600 gramos con salsas",
+                            Estado = 2,
+                            ImagenProducto = "",
+                            UsuarioAdd = "Sistema",
+                            ValorProducto = 120000m,
+                            stock = 10
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoriaProductoId = 1,
+                            DescripcionProducto = "Hamburgesa",
+                            DetalleProducto = "Hamburgesa doble carne, con huevo y salsa de la casa",
+                            Estado = 2,
+                            ImagenProducto = "",
+                            UsuarioAdd = "Sistema",
+                            ValorProducto = 25000m,
+                            stock = 5
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoriaProductoId = 1,
+                            DescripcionProducto = "Cerveza Modelo",
+                            DetalleProducto = "Caja de cervezas de 6 unidades",
+                            Estado = 2,
+                            ImagenProducto = "",
+                            UsuarioAdd = "Sistema",
+                            ValorProducto = 90000m,
+                            stock = 12
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Promocion", b =>
@@ -995,7 +2942,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("FechaFinPromocion")
@@ -1007,8 +2954,9 @@ namespace WahooInfraestructure.Migrations
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
-                    b.Property<byte>("ImagenPromocion")
-                        .HasColumnType("tinyint");
+                    b.Property<string>("ImagenPromocion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProductoId")
                         .HasColumnType("int");
@@ -1017,7 +2965,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1030,6 +2977,47 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("TipoPromocionId");
 
                     b.ToTable("Promociones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CodigoPromocional = "AAA123",
+                            DescripcionPromocion = "2x1",
+                            Estado = 2,
+                            FechaFinPromocion = new DateTime(2025, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaInicioPromocion = new DateTime(2025, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImagenPromocion = "",
+                            ProductoId = 1,
+                            TipoPromocionId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CodigoPromocional = "ABC123",
+                            DescripcionPromocion = "Por tiempo limitado",
+                            Estado = 2,
+                            FechaFinPromocion = new DateTime(2025, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaInicioPromocion = new DateTime(2025, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImagenPromocion = "",
+                            ProductoId = 2,
+                            TipoPromocionId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CodigoPromocional = "BCA123",
+                            DescripcionPromocion = "Descuento Especial",
+                            Estado = 2,
+                            FechaFinPromocion = new DateTime(2025, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaInicioPromocion = new DateTime(2025, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImagenPromocion = "",
+                            ProductoId = 3,
+                            TipoPromocionId = 3,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Rol", b =>
@@ -1047,7 +3035,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -1057,7 +3045,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1068,6 +3055,48 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("ModuloId");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionRol = "Soporte",
+                            Estado = 2,
+                            ModuloId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionRol = "Administrador",
+                            Estado = 2,
+                            ModuloId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionRol = "Comercio",
+                            Estado = 2,
+                            ModuloId = 3,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionRol = "Domiciliario Propio",
+                            Estado = 2,
+                            ModuloId = 4,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionRol = "Domiciliario Externo",
+                            Estado = 2,
+                            ModuloId = 5,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Saldo", b =>
@@ -1081,7 +3110,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -1097,7 +3126,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UsuarioId")
@@ -1127,7 +3155,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -1137,7 +3165,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1165,14 +3192,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1181,6 +3207,29 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoEntidades");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionTipoEntidad = "Banco",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionTipoEntidad = "Restaurante",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionTipoEntidad = "Comercio",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.TipoIdentificacion", b =>
@@ -1198,14 +3247,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1214,6 +3262,43 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoIdentificaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionTipoIdentificacion = "Tarjeta de identidad",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionTipoIdentificacion = "Cedula de ciudadania",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionTipoIdentificacion = "Cedula extrajeria",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DescripcionTipoIdentificacion = "OCRRE Cedula Isleña",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DescripcionTipoIdentificacion = "Pasaporte",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.TipoPQRS", b =>
@@ -1231,14 +3316,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1247,6 +3331,29 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoPQRs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionTipoPQRS = "Queja",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionTipoPQRS = "Peticion o sugerencia",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionTipoPQRS = "Reclamo",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.TipoPromocion", b =>
@@ -1264,14 +3371,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1280,6 +3386,29 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoPromociones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionTipoPromocion = "Diaria",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionTipoPromocion = "Mensual",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionTipoPromocion = "Fecha Indefinida",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.TipoTransaccion", b =>
@@ -1297,14 +3426,13 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1313,6 +3441,50 @@ namespace WahooInfraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoTransacciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DecripcionTipoTransaccion = "Pago Domicilio",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DecripcionTipoTransaccion = "Pago Domiciliario",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DecripcionTipoTransaccion = "Pago Aliados",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DecripcionTipoTransaccion = "Pago Susbcripcion",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DecripcionTipoTransaccion = "Pago Domciliario",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DecripcionTipoTransaccion = "Pago Clientes",
+                            Estado = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Transaccion", b =>
@@ -1340,7 +3512,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -1350,7 +3522,6 @@ namespace WahooInfraestructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1365,6 +3536,41 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("TipoTransaccionId");
 
                     b.ToTable("Transacciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescripcionAdicional = "Doble carne",
+                            DescripcionTransaccion = "Pago Hamburguesa",
+                            DomicilioId = 1,
+                            EntidadId = 1,
+                            Estado = 2,
+                            TipoTransaccionId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DescripcionAdicional = "Doble carne",
+                            DescripcionTransaccion = "Pago Langosta",
+                            DomicilioId = 2,
+                            EntidadId = 1,
+                            Estado = 2,
+                            TipoTransaccionId = 1,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DescripcionAdicional = "Doble carne",
+                            DescripcionTransaccion = "Pago Cerveza Modelo",
+                            DomicilioId = 3,
+                            EntidadId = 1,
+                            Estado = 2,
+                            TipoTransaccionId = 1,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Usuario", b =>
@@ -1404,7 +3610,7 @@ namespace WahooInfraestructure.Migrations
                     b.Property<DateTime>("ExpedicionCedula")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("FechaAdd")
+                    b.Property<DateTime?>("FechaAdd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaUp")
@@ -1415,6 +3621,10 @@ namespace WahooInfraestructure.Migrations
 
                     b.Property<int>("HorarioUsuario")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImagenUsuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LicenciaConduccion")
                         .IsRequired()
@@ -1439,14 +3649,14 @@ namespace WahooInfraestructure.Migrations
                     b.Property<int>("RolId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TelefonoUsuario")
-                        .HasColumnType("int");
+                    b.Property<string>("TelefonoUsuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TipoIdentificacionId")
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioAdd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioUp")
@@ -1459,6 +3669,80 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("TipoIdentificacionId");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ApellidoUsuario = "Cruz",
+                            CausacionPagos = "Diario",
+                            Circulacion = 1,
+                            Correo = "hcruz5785@gmail.com",
+                            DireccionUsuario = "KR 109 A # 151 - 09",
+                            Documentos = "documento.jpg",
+                            Estado = 2,
+                            ExpedicionCedula = new DateTime(2016, 11, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FormaPago = 1,
+                            HorarioUsuario = 1,
+                            ImagenUsuario = "",
+                            LicenciaConduccion = "SDHSDF",
+                            Login = "1049655475",
+                            NombreUsuario = "Hector",
+                            Password = "147258963***",
+                            PlacaMoto = "FUG321",
+                            RolId = 1,
+                            TelefonoUsuario = "3219856584",
+                            TipoIdentificacionId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ApellidoUsuario = "Vargas",
+                            CausacionPagos = "Mensual",
+                            Circulacion = 1,
+                            Correo = "hcruz5785@gmail.com",
+                            DireccionUsuario = "KR 95 A # 92 - 64",
+                            Documentos = "documento.png",
+                            Estado = 2,
+                            ExpedicionCedula = new DateTime(2013, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FormaPago = 2,
+                            HorarioUsuario = 1,
+                            ImagenUsuario = "",
+                            LicenciaConduccion = "WHDGS",
+                            Login = "123456789",
+                            NombreUsuario = "Cristian",
+                            Password = "147258963*1*",
+                            PlacaMoto = "BGE587",
+                            RolId = 2,
+                            TelefonoUsuario = "3123960059",
+                            TipoIdentificacionId = 2,
+                            UsuarioAdd = "Sistema"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ApellidoUsuario = "Ospina",
+                            CausacionPagos = "Quincenal",
+                            Circulacion = 1,
+                            Correo = "hcruz5785@gmail.com",
+                            DireccionUsuario = "KR 97 A # 92 - 09",
+                            Documentos = "documento.pdf",
+                            Estado = 2,
+                            ExpedicionCedula = new DateTime(2010, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FormaPago = 3,
+                            HorarioUsuario = 1,
+                            ImagenUsuario = "",
+                            LicenciaConduccion = "GEGSWFFS",
+                            Login = "987654321",
+                            NombreUsuario = "Juan Pablo",
+                            Password = "147**2*",
+                            PlacaMoto = "TTE432",
+                            RolId = 3,
+                            TelefonoUsuario = "3103232316",
+                            TipoIdentificacionId = 2,
+                            UsuarioAdd = "Sistema"
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Calificacion", b =>
@@ -1597,17 +3881,6 @@ namespace WahooInfraestructure.Migrations
                     b.Navigation("CategoriaLog");
                 });
 
-            modelBuilder.Entity("WahooDomain.Modulo", b =>
-                {
-                    b.HasOne("WahooDomain.Permiso", "Permiso")
-                        .WithMany()
-                        .HasForeignKey("PermisoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Permiso");
-                });
-
             modelBuilder.Entity("WahooDomain.Notificacion", b =>
                 {
                     b.HasOne("WahooDomain.Usuario", "Usuario")
@@ -1636,6 +3909,17 @@ namespace WahooInfraestructure.Migrations
                     b.Navigation("TipoPQRS");
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("WahooDomain.Permiso", b =>
+                {
+                    b.HasOne("WahooDomain.Modulo", "Modulo")
+                        .WithMany()
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Modulo");
                 });
 
             modelBuilder.Entity("WahooDomain.Producto", b =>

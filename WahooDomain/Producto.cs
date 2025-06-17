@@ -12,9 +12,10 @@ namespace WahooDomain
         public string DescripcionProducto { get; set; }
         public int stock { get; set; }
         public decimal ValorProducto { get; set; }
-        public byte ImagenProducto { get; set; }
+        public string ImagenProducto { get; set; }
         public int CategoriaProductoId { get; set; }
         public CategoriaProducto CategoriaProducto { get; set; }
+        public string DetalleProducto { get; set; }
 
     }
 }

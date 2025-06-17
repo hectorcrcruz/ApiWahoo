@@ -11,10 +11,10 @@ namespace WahooApplication.Features.Chat.Commands.AddChat
     {
         public int Id { get; set; }
         public string Mensaje { get; set; }
-        public byte DocumentoSoporte { get; set; }
+        public string DocumentoSoporte { get; set; }
         public int Emisor { get; set; }
         public int Receptor { get; set; }
-        public byte Documento { get; set; }
+        public string Documento { get; set; }
         public int Estado { get; set; }
         public string? UsuarioAdd { get; set; }
         public DateTime? FechaAdd { get; set; }

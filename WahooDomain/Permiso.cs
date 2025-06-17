@@ -10,5 +10,7 @@ namespace WahooDomain
     public class Permiso : Entity
     {
         public string DescripcionPermiso { get; set; }
+        public int ModuloId { get; set; }
+        public Modulo Modulo { get; set; }
     }
 }

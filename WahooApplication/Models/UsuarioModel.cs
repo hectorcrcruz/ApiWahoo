@@ -12,7 +12,7 @@ namespace WahooApplication.Models
     {
         public string NombreUsuario { get; set; }
         public string ApellidoUsuario { get; set; }
-        public int TelefonoUsuario { get; set; }
+        public string TelefonoUsuario { get; set; }
         public DateTime ExpedicionCedula { get; set; }
         public string DireccionUsuario { get; set; }
         public string PlacaMoto { get; set; }
@@ -27,5 +27,7 @@ namespace WahooApplication.Models
         public string CausacionPagos { get; set; }
         public int RolId { get; set; }
         public int TipoIdentificacionId { get; set; }
+        public string ImagenUsuario { get; set; }
+
     }
 }

@@ -30,6 +30,7 @@ namespace WahooApplication.Features.Permiso.Commands.UpPermiso
             if (VerifiData != null)
             {
                 VerifiData.DescripcionPermiso = request.DescripcionPermiso;
+                VerifiData.ModuloId = request.ModuloId;
                 VerifiData.Estado = request.Estado;
                 VerifiData.UsuarioUp = request.UsuarioUp;
                 VerifiData.FechaUp = request.FechaUp;

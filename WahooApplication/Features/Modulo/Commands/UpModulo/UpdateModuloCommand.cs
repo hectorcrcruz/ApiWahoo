@@ -11,7 +11,6 @@ namespace WahooApplication.Features.Modulo.Commands.UpModulo
     {
         public int Id { get; set; }
         public string DescripcionModulo { get; set; }
-        public int PermisoId { get; set; }
         public string? UsuarioUp { get; set; }
         public int Estado { get; set; }
         public DateTime? FechaUp { get; set; }
