@@ -137,6 +137,12 @@ namespace WahooInfraestructure.Persistence
                 new CategoriaLog { Id = 3, DescripcionCategoriaLog = "Alerta", UsuarioAdd = "Sistema", Estado = 2 }
             );
 
+            modelBuilder.Entity<Log>().HasData(
+                new Log { Id = 1, DescripcionLog = "Error al guardar la infromacion", CategoriaLogId = 1, UsuarioAdd = "Sistema", Estado = 2 },
+                new Log { Id = 2, DescripcionLog = "Error al asignar el domicilio", CategoriaLogId = 2, UsuarioAdd = "Sistema", Estado = 2 },
+                new Log { Id = 3, DescripcionLog = "Se debe seleccionar un ingrediente para el pedido", CategoriaLogId = 3, UsuarioAdd = "Sistema", Estado = 2 }
+            );
+
             modelBuilder.Entity<CategoriaProducto>().HasData(
                 new CategoriaProducto { Id = 1, DescripcionCategoriaProducto = "Restaurante", UsuarioAdd = "Sistema", Estado = 2 },
                 new CategoriaProducto { Id = 2, DescripcionCategoriaProducto = "Hogar", UsuarioAdd = "Sistema", Estado = 2 },
@@ -495,11 +501,12 @@ namespace WahooInfraestructure.Persistence
                 new Transaccion { Id = 3, DescripcionTransaccion = "Pago Cerveza Modelo", DescripcionAdicional = "Doble carne", DomicilioId = 3, EntidadId = 1, TipoTransaccionId = 1, UsuarioAdd = "Sistema", Estado = 2 }
             );
 
-            modelBuilder.Entity<Log>().HasData(
-                new Log { Id = 1, DescripcionLog = "Error al guardar la infromacion", CategoriaLogId = 1, UsuarioAdd = "Sistema", Estado = 2 },
-                new Log { Id = 2, DescripcionLog = "Error al asignar el domicilio", CategoriaLogId = 1, UsuarioAdd = "Sistema", Estado = 2 },
-                new Log { Id = 3, DescripcionLog = "Se debe seleccionar un ingrediente para el pedido", CategoriaLogId = 2, UsuarioAdd = "Sistema", Estado = 2 }
-            );
+
+            modelBuilder.Entity<Calificacion>().HasData(
+            new Calificacion { Id = 1, PuntajeCalificacion = 10, ParametroEvaluacionId = 1, CriterioEvaluacionId = 1, UsuarioId = 1, UsuarioAdd = "Sistema", Estado = 2 },
+            new Calificacion { Id = 2, PuntajeCalificacion = 09, ParametroEvaluacionId = 2, CriterioEvaluacionId = 2, UsuarioId = 2, UsuarioAdd = "Sistema", Estado = 2 },
+            new Calificacion { Id = 3, PuntajeCalificacion = 05, ParametroEvaluacionId = 3, CriterioEvaluacionId = 3, UsuarioId = 3, UsuarioAdd = "Sistema", Estado = 2 }
+        );
 
             modelBuilder.Entity<Parametrizacion>().HasData(
                 new Parametrizacion { Id = 1, NombreApp = "Wahoo", Logo = "", ColorTexto = "", ColorPrimario = "#733089", ColorSecundario = "#ebbaf7", ColorTerciario = "#f9e5ff", ColorBotonCrear = "#cb2c7f", ColorBotonActualizar = "#720094", ColorBotonEliminar = "#cc1329", TextoPrimario = "2025", TextoSecundario = "SofToolSolution", TextoTerciario = "Promociones y descuentos especiales", TextoCuaternario = "Publicidad", TipoLetra = "Agency FB", Footer = "Todos los derechos reservados", UsuarioAdd = "Sistema", Estado = 2 },

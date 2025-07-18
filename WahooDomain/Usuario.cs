@@ -29,5 +29,6 @@ namespace WahooDomain
         public string ImagenUsuario { get; set; }
         public int TipoIdentificacionId { get; set; }
         public virtual TipoIdentificacion TipoIdentificacion { get; set; }
+        public string? Token { get; set; }
     }
 }

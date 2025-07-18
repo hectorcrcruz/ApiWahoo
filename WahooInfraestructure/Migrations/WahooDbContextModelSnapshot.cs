@@ -66,6 +66,38 @@ namespace WahooInfraestructure.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Calificaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CriterioEvaluacionId = 1,
+                            Estado = 2,
+                            ParametroEvaluacionId = 1,
+                            PuntajeCalificacion = 10,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CriterioEvaluacionId = 2,
+                            Estado = 2,
+                            ParametroEvaluacionId = 2,
+                            PuntajeCalificacion = 9,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CriterioEvaluacionId = 3,
+                            Estado = 2,
+                            ParametroEvaluacionId = 3,
+                            PuntajeCalificacion = 5,
+                            UsuarioAdd = "Sistema",
+                            UsuarioId = 3
+                        });
                 });
 
             modelBuilder.Entity("WahooDomain.Catalogo", b =>
@@ -1206,7 +1238,7 @@ namespace WahooInfraestructure.Migrations
                         new
                         {
                             Id = 2,
-                            CategoriaLogId = 1,
+                            CategoriaLogId = 2,
                             DescripcionLog = "Error al asignar el domicilio",
                             Estado = 2,
                             UsuarioAdd = "Sistema"
@@ -1214,7 +1246,7 @@ namespace WahooInfraestructure.Migrations
                         new
                         {
                             Id = 3,
-                            CategoriaLogId = 2,
+                            CategoriaLogId = 3,
                             DescripcionLog = "Se debe seleccionar un ingrediente para el pedido",
                             Estado = 2,
                             UsuarioAdd = "Sistema"
@@ -1752,7 +1784,7 @@ namespace WahooInfraestructure.Migrations
                         {
                             Id = 1,
                             Estado = 2,
-                            FechaAdd = new DateTime(2025, 6, 17, 17, 41, 50, 504, DateTimeKind.Local).AddTicks(4670),
+                            FechaAdd = new DateTime(2025, 7, 15, 19, 7, 14, 662, DateTimeKind.Local).AddTicks(484),
                             NombrePais = "Colombia",
                             UsuarioAdd = "Sistema"
                         });
@@ -3655,6 +3687,9 @@ namespace WahooInfraestructure.Migrations
 
                     b.Property<int>("TipoIdentificacionId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsuarioAdd")
                         .HasColumnType("nvarchar(max)");
