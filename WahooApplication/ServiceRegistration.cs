@@ -8,7 +8,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using WahooApplication.Commons;
 using WahooApplication.Mappings;
+using WahooApplication.Services;
 
 namespace WahooApplication
 {
@@ -24,7 +26,7 @@ namespace WahooApplication
             });
             IMapper mapper = mapperConfiguration.CreateMapper();
             services.AddSingleton(mapper);
-
+            
             return services;
         }
     }
