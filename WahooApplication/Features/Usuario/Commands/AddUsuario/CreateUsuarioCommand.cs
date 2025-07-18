@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,5 +32,6 @@ namespace WahooApplication.Features.Usuario.Commands.AddUsuario
         public string? UsuarioAdd { get; set; }
         public int Estado { get; set; }
         public DateTime? FechaAdd { get; set; }
+        public IFormFile ProfilePhoto { get; set; }
     }
 }
