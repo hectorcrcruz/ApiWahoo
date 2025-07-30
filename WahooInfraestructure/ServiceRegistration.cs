@@ -11,6 +11,9 @@ using WahooApplication.Contracts.Persistence;
 using WahooApplication.Services;
 using WahooInfraestructure.Persistence;
 using WahooInfraestructure.Repositories;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+
 
 namespace WahooInfraestructure
 {
@@ -22,9 +25,6 @@ namespace WahooInfraestructure
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            var AzureBlobStorage = configuration.GetSection("AzureBlobStorage");
-            services.Configure<AzureBlobStorageOptions>(AzureBlobStorage);
-            services.AddSingleton<BlobStorageService>();
 
             return services;
         }

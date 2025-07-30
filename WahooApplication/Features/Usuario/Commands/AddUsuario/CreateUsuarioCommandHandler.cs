@@ -17,13 +17,11 @@ namespace WahooApplication.Features.Usuario.Commands.AddUsuario
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ILogger<CreateUsuarioCommandHandler> _logger;
-        private readonly BlobStorageService _blobStorageService;
-        public CreateUsuarioCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, ILogger<CreateUsuarioCommandHandler> logger, BlobStorageService blobStorageService)
+        public CreateUsuarioCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, ILogger<CreateUsuarioCommandHandler> logger)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _logger = logger;
-            _blobStorageService = blobStorageService;
         }
         public async Task<bool> Handle(CreateUsuarioCommand request, CancellationToken cancellationToken)
         {
@@ -35,7 +33,7 @@ namespace WahooApplication.Features.Usuario.Commands.AddUsuario
                 string? urlImagen = null;
                 if (request.ProfilePhoto != null)
                 {
-                    urlImagen = await _blobStorageService.UploadAsync(request.ProfilePhoto);
+                    //urlImagen = await _blobStorageService.UploadAsync(request.ProfilePhoto);
                 }
                 var Entity = _mapper.Map<WahooDomain.Usuario>(request);
                 var EntityAdd = await _unitOfWork.Repository<WahooDomain.Usuario>().AddAsync(Entity);

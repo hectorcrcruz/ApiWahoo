@@ -59,7 +59,7 @@
             },
             "Azure.Storage.Blobs": {
               "target": "Package",
-              "version": "[12.24.1, )"
+              "version": "[12.25.0, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -67,7 +67,7 @@
             },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[2.3.0, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",

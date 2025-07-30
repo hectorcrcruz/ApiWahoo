@@ -1,6 +1,8 @@
 using WahooApplication;
 using WahooInfraestructure;
 using Azure.Identity;
+using WahooApplication.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
@@ -15,6 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddScoped<IAzureStorageService, AzureStorageService>();
 
 // Agrega el servicio CORS
 builder.Services.AddCors(options =>
