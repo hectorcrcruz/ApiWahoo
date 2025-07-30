@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using WahooDomain.Common;
+
+namespace WahooDomain
+{
+    public class Permiso : Entity
+    {
+        public string DescripcionPermiso { get; set; }
+        public int ModuloId { get; set; }
+        public Modulo Modulo { get; set; }
+    }
+}

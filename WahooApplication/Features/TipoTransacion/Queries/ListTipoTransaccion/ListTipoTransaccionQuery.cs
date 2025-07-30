@@ -1,0 +1,19 @@
+﻿using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using WahooApplication.Models;
+
+namespace WahooApplication.Features.TipoTransacion.Queries.ListTipoTransaccion
+{
+    public class ListTipoTransaccionQuery : IRequest<List<TipoTransaccionModel>>
+    {
+        public ListTipoTransaccionQuery(int? id)
+        {
+            Id = id;
+        }
+        public int? Id { get; set; }
+    }
+}
