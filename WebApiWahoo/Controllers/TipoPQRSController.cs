@@ -8,7 +8,7 @@ using WahooApplication.Features.TipoIdentificacion.Queries.ListTipoIdentificacio
 using WahooApplication.Features.TipoPQRS.Commands.AddTipoPQRS;
 using WahooApplication.Features.TipoPQRS.Commands.UpTipoPQRS;
 using WahooApplication.Features.TipoPQRS.Queries.ListTipoPQRS;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

@@ -9,7 +9,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.CategoriaLog.Commands.AddCategoriaLogs;
 using WahooApplication.Features.CategoriaLog.Commands.UpCategoriaLog;
 using WahooApplication.Features.CategoriaLog.Queries.ListCategoriaLog;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

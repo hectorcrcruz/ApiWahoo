@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.PQRS.Commands.AddPQRS;
 using WahooApplication.Features.PQRS.Commands.UpPQRS;
 using WahooApplication.Features.PQRS.Queries.ListPQRS;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

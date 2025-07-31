@@ -9,7 +9,6 @@ using WahooApplication.Features.TipoIdentificacion.Queries.ListTipoIdentificacio
 using WahooApplication.Features.Usuario.Commands.AddUsuario;
 using WahooApplication.Features.Usuario.Commands.UpUsuario;
 using WahooApplication.Features.Usuario.Queries.ListUsuario;
-using WahooApplication.Logs;
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

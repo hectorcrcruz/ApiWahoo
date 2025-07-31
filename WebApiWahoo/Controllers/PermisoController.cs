@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Permiso.Commands.AddPermiso;
 using WahooApplication.Features.Permiso.Commands.UpPermiso;
 using WahooApplication.Features.Permiso.Queries.ListPermiso;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

@@ -9,7 +9,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Chat.Commands.AddChat;
 using WahooApplication.Features.Chat.Commands.UpChat;
 using WahooApplication.Features.Chat.Queries.ListChat;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

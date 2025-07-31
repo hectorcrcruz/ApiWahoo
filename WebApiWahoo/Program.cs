@@ -2,6 +2,7 @@ using WahooApplication;
 using WahooInfraestructure;
 using Azure.Identity;
 using WahooApplication.Services;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,6 @@ builder.Services.AddControllers();
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddEnvironmentVariables();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddScoped<IAzureStorageService, AzureStorageService>();
@@ -27,6 +27,36 @@ builder.Services.AddCors(options =>
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
+});
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Mi API", Version = "v1" });
+
+    // Configurar esquema de seguridad JWT
+    var jwtSecurityScheme = new OpenApiSecurityScheme
+    {
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Description = "Introduce tu token JWT en este formato: Bearer {tu token}",
+
+        Reference = new OpenApiReference
+        {
+            Id = "Bearer",
+            Type = ReferenceType.SecurityScheme
+        }
+    };
+
+    options.AddSecurityDefinition("Bearer", jwtSecurityScheme);
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            jwtSecurityScheme, Array.Empty<string>()
+        }
+    });
 });
 
 var app = builder.Build();
@@ -43,6 +73,7 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

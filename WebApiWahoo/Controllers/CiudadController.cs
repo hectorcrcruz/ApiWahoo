@@ -9,7 +9,6 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Ciudad.Commands.AddCiudad;
 using WahooApplication.Features.Ciudad.Commands.UpCiudad;
 using WahooApplication.Features.Ciudad.Queries.ListCiudad;
-using WahooApplication.Logs;
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

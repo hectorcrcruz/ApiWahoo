@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Saldo.Commands.AddSaldo;
 using WahooApplication.Features.Saldo.Commands.UpSaldo;
 using WahooApplication.Features.Saldo.Queries.ListSaldo;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

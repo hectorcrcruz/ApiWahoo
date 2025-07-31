@@ -9,7 +9,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Catalogo.Commands.AddCatalogo;
 using WahooApplication.Features.Catalogo.Commands.UpCatalogo;
 using WahooApplication.Features.Catalogo.Queries.ListCatalogo;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

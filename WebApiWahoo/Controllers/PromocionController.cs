@@ -9,7 +9,7 @@ using WahooApplication.Features.Producto.Commands.UpProducto;
 using WahooApplication.Features.Promocion.Commands.AddPromocion;
 using WahooApplication.Features.Promocion.Commands.UpPromocion;
 using WahooApplication.Features.Promocion.Queries.ListPromocion;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

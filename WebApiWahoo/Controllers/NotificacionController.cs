@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Notificacion.Commands.AddNotificacion;
 using WahooApplication.Features.Notificacion.Commands.UpNotificacion;
 using WahooApplication.Features.Notificacion.Queries.ListNotificacion;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

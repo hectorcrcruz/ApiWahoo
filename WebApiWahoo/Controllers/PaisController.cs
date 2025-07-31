@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Pais.Commands.AddPais;
 using WahooApplication.Features.Pais.Commands.UpPais;
 using WahooApplication.Features.Pais.Queries.ListPais;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

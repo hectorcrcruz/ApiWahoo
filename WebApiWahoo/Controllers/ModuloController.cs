@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Modulo.Commands.AddMdulo;
 using WahooApplication.Features.Modulo.Commands.UpModulo;
 using WahooApplication.Features.Modulo.Queries.ListModulo;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

@@ -10,7 +10,6 @@ using WahooApplication.Features.CategoriaLog.Queries.ListCategoriaLog;
 using WahooApplication.Features.CategoriaProducto.Commands.AddCategoriaProducto;
 using WahooApplication.Features.CategoriaProducto.Commands.UpCategoriaProducto;
 using WahooApplication.Features.CategoriaProducto.Queries.ListCategoria;
-using WahooApplication.Logs;
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

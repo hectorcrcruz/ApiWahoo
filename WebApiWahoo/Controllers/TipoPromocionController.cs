@@ -8,7 +8,7 @@ using WahooApplication.Features.TipoIdentificacion.Queries.ListTipoIdentificacio
 using WahooApplication.Features.TipoPromocion.Commands.AddTipoPromocion;
 using WahooApplication.Features.TipoPromocion.Commands.UpTipoPromocion;
 using WahooApplication.Features.TipoPromocion.Queries.ListTipoPromocion;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

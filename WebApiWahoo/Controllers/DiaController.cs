@@ -9,7 +9,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Dia.Commands.AddDia;
 using WahooApplication.Features.Dia.Commands.UpDia;
 using WahooApplication.Features.Dia.Queries.ListDia;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

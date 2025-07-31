@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Item.Commands.AddItem;
 using WahooApplication.Features.Item.Commands.UpItem;
 using WahooApplication.Features.Item.Queries.ListItem;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.FaseDomicilio.Commands.AddFaseDomicilio;
 using WahooApplication.Features.FaseDomicilio.Commands.UpFaseDomicilio;
 using WahooApplication.Features.FaseDomicilio.Queries.ListFaseDomicilio;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers
