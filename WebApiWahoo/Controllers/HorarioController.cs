@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Horario.Commands.AddHorario;
 using WahooApplication.Features.Horario.Commands.UpHorario;
 using WahooApplication.Features.Horario.Queries.ListHorario;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

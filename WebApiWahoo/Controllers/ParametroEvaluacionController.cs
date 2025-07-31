@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.ParametroEvaluacion.Commands.AddParametroEvaluacion;
 using WahooApplication.Features.ParametroEvaluacion.Commands.UpParametroEvaluacion;
 using WahooApplication.Features.ParametroEvaluacion.Queries.ListParametroEvaluacion;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

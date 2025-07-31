@@ -6,7 +6,6 @@ using WahooApplication.Contracts.Persistence;
 using WahooApplication.Features.Calificacion.Commands.CreateCalificacion;
 using WahooApplication.Features.Calificacion.Commands.UpCalificacion;
 using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
-using WahooApplication.Logs;
 using WahooApplication.Models;
 using WahooDomain;
 

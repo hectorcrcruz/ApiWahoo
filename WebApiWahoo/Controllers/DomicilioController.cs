@@ -9,7 +9,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Domicilio.Commands.AddDomicilio;
 using WahooApplication.Features.Domicilio.Commands.UpDomicilio;
 using WahooApplication.Features.Domicilio.Queries;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

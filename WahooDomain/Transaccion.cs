@@ -20,6 +20,6 @@ namespace WahooDomain
         public int MedioPagoId { get; set; }
         public int Unidades { get; set; }
         public int Valor { get; set; }
-        public string Direccion { get; set; }
+        public string? Direccion { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using WahooApplication.Features.TipoIdentificacion.Queries.ListTipoIdentificacio
 using WahooApplication.Features.Transaccion.Commands.AddTransaccion;
 using WahooApplication.Features.Transaccion.Commands.UpTransaccion;
 using WahooApplication.Features.Transaccion.Queries.ListTransaccion;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.MedioPago.Commands.AddMedioPago;
 using WahooApplication.Features.MedioPago.Commands.UpMedioPago;
 using WahooApplication.Features.MedioPago.Queries.ListMedioPago;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

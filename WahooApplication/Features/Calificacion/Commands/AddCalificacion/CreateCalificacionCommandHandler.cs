@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WahooApplication.Contracts.Persistence;
-using WahooApplication.Logs;
 using WahooDomain;
 
 namespace WahooApplication.Features.Calificacion.Commands.CreateCalificacion

@@ -9,7 +9,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.Estado.Commands.AddEstado;
 using WahooApplication.Features.Estado.Commands.UpEstado;
 using WahooApplication.Features.Estado.Queries.ListEstado;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

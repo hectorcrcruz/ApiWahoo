@@ -59,8 +59,14 @@ namespace WebApiWahoo.Controllers
 
                 var jwt = new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
                 user.Token = jwt;
+                user.Message = "¡Usuario Encontrado!";
+
+                return Ok(user);
             }
-            return Ok(user);
+            else
+            {
+                return new LoginModel { Message = "¡Usuario no encontrado!" };
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ using WahooApplication.Features.TipoEntidad.Queries.ListTipoEntidad;
 using WahooApplication.Features.TipoIdentificacion.Commands.AddTipoIdentificacion;
 using WahooApplication.Features.TipoIdentificacion.Commands.UpTipoIdentificacion;
 using WahooApplication.Features.TipoIdentificacion.Queries.ListTipoIdentificacion;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

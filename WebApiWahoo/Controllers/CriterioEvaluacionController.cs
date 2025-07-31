@@ -9,7 +9,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.CriterioEvaluacion.Commands.AddCriterioEvaluacion;
 using WahooApplication.Features.CriterioEvaluacion.Commands.UpCriterioEvaluacion;
 using WahooApplication.Features.CriterioEvaluacion.Queries.ListCriterioEvaluacion;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers

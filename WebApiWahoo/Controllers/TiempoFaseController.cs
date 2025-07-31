@@ -8,7 +8,7 @@ using WahooApplication.Features.Calificacion.Queries.ListCalificacion;
 using WahooApplication.Features.TiempoFase.Commands.AddTiempoFase;
 using WahooApplication.Features.TiempoFase.Commands.UpTiempoFase;
 using WahooApplication.Features.TiempoFase.Queries.ListTempoFase;
-using WahooApplication.Logs;
+
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers
