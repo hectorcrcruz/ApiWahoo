@@ -34,7 +34,8 @@ namespace WahooApplication.Features.Promocion.Commands.UpPromocion
                 VerifiData.ProductoId = request.ProductoId;
                 VerifiData.FechaFinPromocion = request.FechaFinPromocion;
                 VerifiData.FechaInicioPromocion = request.FechaInicioPromocion;
-                VerifiData.ImagenPromocion = request.ImagenPromocion;
+                VerifiData.ImagenPrimariaPromocion = request.ImagenPrimariaPromocion;
+                VerifiData.ImagenSecundariaPromocion = request.ImagenSecundariaPromocion;
                 VerifiData.CodigoPromocional = request.CodigoPromocional;
                 VerifiData.TipoPromocionId = request.TipoPromocionId;
                 VerifiData.Estado = request.Estado;

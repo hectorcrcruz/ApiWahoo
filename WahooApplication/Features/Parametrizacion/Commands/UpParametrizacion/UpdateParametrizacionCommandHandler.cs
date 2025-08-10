@@ -35,6 +35,7 @@ namespace WahooApplication.Features.Parametrizacion.Commands.UpParametrizacion
                 VerifiData.Footer = request.Footer;
                 VerifiData.TipoLetra = request.TipoLetra;
                 VerifiData.Logo = request.Logo;
+                VerifiData.BackgroundImagen = request.BackgroundImagen;
                 VerifiData.ColorPrimario = request.ColorPrimario;
                 VerifiData.ColorSecundario = request.ColorSecundario;
                 VerifiData.ColorTerciario = request.ColorTerciario;

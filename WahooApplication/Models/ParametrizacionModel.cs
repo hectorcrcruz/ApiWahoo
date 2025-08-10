@@ -12,6 +12,7 @@ namespace WahooApplication.Models
         public string NombreApp { get; set; }
         public string Footer { get; set; }
         public string Logo { get; set; }
+        public string BackgroundImagen { get; set; }
         public string ColorPrimario { get; set; }
         public string ColorSecundario { get; set; }
         public string ColorTerciario { get; set; }
