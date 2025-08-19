@@ -30,7 +30,7 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Mi API", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Mi API Wahoo", Version = "v1" });
 
     // Configurar esquema de seguridad JWT
     var jwtSecurityScheme = new OpenApiSecurityScheme

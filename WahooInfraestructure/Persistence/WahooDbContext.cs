@@ -87,9 +87,14 @@ namespace WahooInfraestructure.Persistence
             modelBuilder.Entity<Rol>().HasData(
                 new Rol { Id = 1, DescripcionRol = "Soporte", ModuloId = 1, UsuarioAdd = "Sistema", Estado = 2 },
                 new Rol { Id = 2, DescripcionRol = "Administrador", ModuloId = 2, UsuarioAdd = "Sistema", Estado = 2 },
-                new Rol { Id = 3, DescripcionRol = "Comercio", ModuloId = 3, UsuarioAdd = "Sistema", Estado = 2 },
-                new Rol { Id = 4, DescripcionRol = "Domiciliario Propio", ModuloId = 4, UsuarioAdd = "Sistema", Estado = 2 },
-                new Rol { Id = 5, DescripcionRol = "Domiciliario Externo", ModuloId = 5, UsuarioAdd = "Sistema", Estado = 2 }
+                new Rol { Id = 3, DescripcionRol = "Servicio al cliente PQRS", ModuloId = 3, UsuarioAdd = "Sistema", Estado = 2 },
+                new Rol { Id = 4, DescripcionRol = "Supervisor", ModuloId = 4, UsuarioAdd = "Sistema", Estado = 2 },
+                new Rol { Id = 5, DescripcionRol = "Proveedor", ModuloId = 4, UsuarioAdd = "Sistema", Estado = 2 },
+                new Rol { Id = 6, DescripcionRol = "Comercio", ModuloId = 4, UsuarioAdd = "Sistema", Estado = 2 },
+                new Rol { Id = 7, DescripcionRol = "Cliente", ModuloId = 4, UsuarioAdd = "Sistema", Estado = 2 },
+                new Rol { Id = 8, DescripcionRol = "Usuario nuevo", ModuloId = 4, UsuarioAdd = "Sistema", Estado = 2 },
+                new Rol { Id = 9, DescripcionRol = "Domiciliario Propio", ModuloId = 4, UsuarioAdd = "Sistema", Estado = 2 },
+                new Rol { Id = 10, DescripcionRol = "Domiciliario Externo", ModuloId = 5, UsuarioAdd = "Sistema", Estado = 2 }
             );
 
             modelBuilder.Entity<Estado>().HasData(
@@ -106,7 +111,7 @@ namespace WahooInfraestructure.Persistence
                 new FaseDomicilio { Id = 4, DescripcionFaseDomicilio = "Domicilio en camino", UsuarioAdd = "Sistema", Estado = 2 },
                 new FaseDomicilio { Id = 5, DescripcionFaseDomicilio = "Domicilio Pendiente", UsuarioAdd = "Sistema", Estado = 2 },
                 new FaseDomicilio { Id = 6, DescripcionFaseDomicilio = "Domicilio Aceptado", UsuarioAdd = "Sistema", Estado = 2 },
-                new FaseDomicilio { Id = 7, DescripcionFaseDomicilio = "Domicilio Recibido", UsuarioAdd = "Sistema", Estado = 2 }
+                new FaseDomicilio { Id = 7, DescripcionFaseDomicilio = "Domicilio Entregado", UsuarioAdd = "Sistema", Estado = 2 }
 
             );
 
@@ -438,15 +443,19 @@ namespace WahooInfraestructure.Persistence
             );
 
             modelBuilder.Entity<Producto>().HasData(
-                new Producto { Id = 1, DescripcionProducto = "Langosta a las finas hierbas", DetalleProducto = "Langosta de 600 gramos con salsas", CategoriaProductoId = 1, stock = 10, ValorProducto = 120000, ImagenProducto = "", UsuarioAdd = "Sistema", Estado = 2 },
-                new Producto { Id = 2, DescripcionProducto = "Hamburgesa", DetalleProducto = "Hamburgesa doble carne, con huevo y salsa de la casa", CategoriaProductoId = 1, stock = 5, ValorProducto = 25000, ImagenProducto = "", UsuarioAdd = "Sistema", Estado = 2 },
-                new Producto { Id = 3, DescripcionProducto = "Cerveza Modelo", DetalleProducto = "Caja de cervezas de 6 unidades", CategoriaProductoId = 1, stock = 12, ValorProducto = 90000, ImagenProducto = "", UsuarioAdd = "Sistema", Estado = 2 }
+                new Producto { Id = 1, DescripcionProducto = "Langosta", DetalleProducto = "Langosta de 600 gramos con salsas", CategoriaProductoId = 1, stock = 10, ValorProducto = 120000, ImagenProducto = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Langosta.png", UsuarioAdd = "Sistema", Estado = 2 },
+                new Producto { Id = 2, DescripcionProducto = "Hamburgesa", DetalleProducto = "Hamburgesa doble carne, con huevo y salsa de la casa", CategoriaProductoId = 1, stock = 5, ValorProducto = 25000, ImagenProducto = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Hamburguesa.png", UsuarioAdd = "Sistema", Estado = 2 },
+                new Producto { Id = 3, DescripcionProducto = "Cerveza Modelo", DetalleProducto = "Caja de cervezas de 6 unidades", CategoriaProductoId = 1, stock = 12, ValorProducto = 90000, ImagenProducto = "https://appwahoostorage.blob.core.windows.net/appwahooimages/CervezasModelo.png", UsuarioAdd = "Sistema", Estado = 2 },
+                new Producto { Id = 4, DescripcionProducto = "Sushi Sensation", DetalleProducto = "Caja de cervezas de 6 unidades", CategoriaProductoId = 1, stock = 12, ValorProducto = 90000, ImagenProducto = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Sushi.png", UsuarioAdd = "Sistema", Estado = 2 },
+                new Producto { Id = 5, DescripcionProducto = "Helados San jeronimo", DetalleProducto = "Caja de cervezas de 6 unidades", CategoriaProductoId = 1, stock = 12, ValorProducto = 90000, ImagenProducto = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Helados.png", UsuarioAdd = "Sistema", Estado = 2 },
+                new Producto { Id = 6, DescripcionProducto = "Cazuela de Mariscos", DetalleProducto = "Caja de cervezas de 6 unidades", CategoriaProductoId = 1, stock = 12, ValorProducto = 90000, ImagenProducto = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Cazuela.png", UsuarioAdd = "Sistema", Estado = 2 }
+
                 );
 
             modelBuilder.Entity<Promocion>().HasData(
-                new Promocion { Id = 1, DescripcionPromocion = "2x1", ProductoId = 1, TipoPromocionId = 1, FechaInicioPromocion = Convert.ToDateTime("2025-04-24"), FechaFinPromocion = Convert.ToDateTime("2025-04-27"), CodigoPromocional = "AAA123", ImagenPromocion = "", UsuarioAdd = "Sistema", Estado = 2 },
-                new Promocion { Id = 2, DescripcionPromocion = "Por tiempo limitado", ProductoId = 2, TipoPromocionId = 2, FechaInicioPromocion = Convert.ToDateTime("2025-04-24"), FechaFinPromocion = Convert.ToDateTime("2025-04-27"), CodigoPromocional = "ABC123", ImagenPromocion = "", UsuarioAdd = "Sistema", Estado = 2 },
-                new Promocion { Id = 3, DescripcionPromocion = "Descuento Especial", ProductoId = 3, TipoPromocionId = 3, FechaInicioPromocion = Convert.ToDateTime("2025-04-24"), FechaFinPromocion = Convert.ToDateTime("2025-04-27"), CodigoPromocional = "BCA123", ImagenPromocion = "", UsuarioAdd = "Sistema", Estado = 2 }
+                new Promocion { Id = 1, DescripcionPromocion = "2x1", ProductoId = 1, TipoPromocionId = 1, FechaInicioPromocion = Convert.ToDateTime("2025-04-24"), FechaFinPromocion = Convert.ToDateTime("2025-04-27"), CodigoPromocional = "AAA123", ImagenPrimariaPromocion = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Promoc1.png", ImagenSecundariaPromocion = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Promocion1.jpg", UsuarioAdd = "Sistema", Estado = 2 },
+                new Promocion { Id = 2, DescripcionPromocion = "Por tiempo limitado", ProductoId = 2, TipoPromocionId = 2, FechaInicioPromocion = Convert.ToDateTime("2025-04-24"), FechaFinPromocion = Convert.ToDateTime("2025-04-27"), CodigoPromocional = "ABC123", ImagenPrimariaPromocion = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Promoc2.png", ImagenSecundariaPromocion = "", UsuarioAdd = "Sistema", Estado = 2 },
+                new Promocion { Id = 3, DescripcionPromocion = "Descuento Especial", ProductoId = 3, TipoPromocionId = 3, FechaInicioPromocion = Convert.ToDateTime("2025-04-24"), FechaFinPromocion = Convert.ToDateTime("2025-04-27"), CodigoPromocional = "BCA123", ImagenPrimariaPromocion = "https://appwahoostorage.blob.core.windows.net/appwahooimages/Promoc3.png", ImagenSecundariaPromocion = "", UsuarioAdd = "Sistema", Estado = 2 }
             );
 
             modelBuilder.Entity<Usuario>().HasData(
@@ -480,9 +489,9 @@ namespace WahooInfraestructure.Persistence
             );
 
             modelBuilder.Entity<Notificacion>().HasData(
-                new Notificacion { Id = 1, DescripcionNotificacion = "Domicilio - Creacion de Pedido", Enviada = false, UsuarioId = 1, UsuarioAdd = "Sistema", Estado = 2 },
-                new Notificacion { Id = 2, DescripcionNotificacion = "Domicilio - Pedido va en camino", Enviada = true, UsuarioId = 1, UsuarioAdd = "Sistema", Estado = 2 },
-                new Notificacion { Id = 3, DescripcionNotificacion = "Domicilio - Pedido entregado", Enviada = false, UsuarioId = 1, UsuarioAdd = "Sistema", Estado = 2 }
+                new Notificacion { Id = 1, DescripcionNotificacion = "Domicilio - Creacion de Pedido", RolId = 1, Enviada = false, UsuarioId = 1, UsuarioAdd = "Sistema", Estado = 2 },
+                new Notificacion { Id = 2, DescripcionNotificacion = "Domicilio - Pedido va en camino", RolId = 1, Enviada = true, UsuarioId = 1, UsuarioAdd = "Sistema", Estado = 2 },
+                new Notificacion { Id = 3, DescripcionNotificacion = "Domicilio - Pedido entregado", RolId = 1, Enviada = false, UsuarioId = 1, UsuarioAdd = "Sistema", Estado = 2 }
             );
 
             modelBuilder.Entity<TipoTransaccion>().HasData(
@@ -510,9 +519,9 @@ namespace WahooInfraestructure.Persistence
             );
 
             modelBuilder.Entity<Parametrizacion>().HasData(
-                new Parametrizacion { Id = 1, NombreApp = "Wahoo", Logo = "", ColorTexto = "", ColorPrimario = "#733089", ColorSecundario = "#ebbaf7", ColorTerciario = "#f9e5ff", ColorBotonCrear = "#cb2c7f", ColorBotonActualizar = "#720094", ColorBotonEliminar = "#cc1329", TextoPrimario = "2025", TextoSecundario = "SofToolSolution", TextoTerciario = "Promociones y descuentos especiales", TextoCuaternario = "Publicidad", TipoLetra = "Agency FB", Footer = "Todos los derechos reservados", UsuarioAdd = "Sistema", Estado = 2 },
-                new Parametrizacion { Id = 2, NombreApp = "Trueque", Logo = "", ColorTexto = "", ColorPrimario = "#733089", ColorSecundario = "#ebbaf7", ColorTerciario = "#f9e5ff", ColorBotonCrear = "#cb2c7f", ColorBotonActualizar = "#720094", ColorBotonEliminar = "#cc1329", TextoPrimario = "2025", TextoSecundario = "SofToolSolution", TextoTerciario = "Promociones y descuentos especiales", TextoCuaternario = "Publicidad", TipoLetra = "Agency FB", Footer = "Todos los derechos reservados", UsuarioAdd = "Sistema", Estado = 2 },
-                new Parametrizacion { Id = 3, NombreApp = "DomiYa", Logo = "", ColorTexto = "", ColorPrimario = "#733089", ColorSecundario = "#ebbaf7", ColorTerciario = "#f9e5ff", ColorBotonCrear = "#cb2c7f", ColorBotonActualizar = "#720094", ColorBotonEliminar = "#cc1329", TextoPrimario = "2025", TextoSecundario = "SofToolSolution", TextoTerciario = "Promociones y descuentos especiales", TextoCuaternario = "Publicidad", TipoLetra = "Agency FB", Footer = "Todos los derechos reservados", UsuarioAdd = "Sistema", Estado = 2 }
+                new Parametrizacion { Id = 1, NombreApp = "Wahoo", Logo = "https://appwahoostorage.blob.core.windows.net/appwahooimages/LogoWahooBlanco.png", BackgroundImagen = "https://appwahoostorage.blob.core.windows.net/appwahooimages/LogoWahooVioleta.png", ColorTexto = "", ColorPrimario = "#733089", ColorSecundario = "#ebbaf7", ColorTerciario = "#f9e5ff", ColorBotonCrear = "#cb2c7f", ColorBotonActualizar = "#720094", ColorBotonEliminar = "#cc1329", TextoPrimario = "2025", TextoSecundario = "SofToolSolution", TextoTerciario = "Promociones y descuentos especiales", TextoCuaternario = "Publicidad", TipoLetra = "Agency FB", Footer = "Todos los derechos reservados", UsuarioAdd = "Sistema", Estado = 2 }
+                //new Parametrizacion { Id = 2, NombreApp = "Trueque", Logo = "", BackgroundImagen = "", ColorTexto = "", ColorPrimario = "#733089", ColorSecundario = "#ebbaf7", ColorTerciario = "#f9e5ff", ColorBotonCrear = "#cb2c7f", ColorBotonActualizar = "#720094", ColorBotonEliminar = "#cc1329", TextoPrimario = "2025", TextoSecundario = "SofToolSolution", TextoTerciario = "Promociones y descuentos especiales", TextoCuaternario = "Publicidad", TipoLetra = "Agency FB", Footer = "Todos los derechos reservados", UsuarioAdd = "Sistema", Estado = 2 },
+                //new Parametrizacion { Id = 3, NombreApp = "DomiYa", Logo = "", BackgroundImagen = "", ColorTexto = "", ColorPrimario = "#733089", ColorSecundario = "#ebbaf7", ColorTerciario = "#f9e5ff", ColorBotonCrear = "#cb2c7f", ColorBotonActualizar = "#720094", ColorBotonEliminar = "#cc1329", TextoPrimario = "2025", TextoSecundario = "SofToolSolution", TextoTerciario = "Promociones y descuentos especiales", TextoCuaternario = "Publicidad", TipoLetra = "Agency FB", Footer = "Todos los derechos reservados", UsuarioAdd = "Sistema", Estado = 2 }
             );
 
 

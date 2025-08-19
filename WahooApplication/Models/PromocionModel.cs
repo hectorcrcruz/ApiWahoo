@@ -14,7 +14,8 @@ namespace WahooApplication.Models
         public int ProductoId { get; set; }
         public DateTime FechaInicioPromocion { get; set; }
         public DateTime FechaFinPromocion { get; set; }
-        public string ImagenPromocion { get; set; }
+        public string ImagenPrimariaPromocion { get; set; }
+        public string ImagenSecundariaPromocion { get; set; }
         public string CodigoPromocional { get; set; }
         public int TipoPromocionId { get; set; }
     }

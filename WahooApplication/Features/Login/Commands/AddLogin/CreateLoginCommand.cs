@@ -10,7 +10,7 @@ namespace WahooApplication.Features.Login.Commands.AddLogin
 {
     public class CreateLoginCommand : IRequest<LoginModel>
     {
-        public string Login { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
     }
 }

@@ -15,16 +15,16 @@ namespace WahooApplication.Features.Usuario.Commands.AddUsuario
         public int TelefonoUsuario { get; set; }
         public DateTime ExpedicionCedula { get; set; }
         public string DireccionUsuario { get; set; }
-        public string PlacaMoto { get; set; }
-        public string LicenciaConduccion { get; set; }
-        public int HorarioUsuario { get; set; }
-        public int FormaPago { get; set; }
+        public string? PlacaMoto { get; set; }
+        public string? LicenciaConduccion { get; set; }
+        public int? HorarioUsuario { get; set; }
+        public int? FormaPago { get; set; }
         public string Login { get; set; }
-        public string Password { get; set; }
-        public string Documentos { get; set; }
+        public string? Password { get; set; }
+        public string? Documentos { get; set; }
         public string Correo { get; set; }
-        public int Circulacion { get; set; }
-        public string CausacionPagos { get; set; }
+        public int? Circulacion { get; set; }
+        public string? CausacionPagos { get; set; }
         public int RolId { get; set; }
         public int TipoIdentificacionId { get; set; }
         public string UsuarioAdd { get; set; }

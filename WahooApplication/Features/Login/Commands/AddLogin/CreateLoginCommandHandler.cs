@@ -24,7 +24,7 @@ namespace WahooApplication.Features.Login.Commands.AddLogin
         }
         public async Task<LoginModel> Handle(CreateLoginCommand request, CancellationToken cancellationToken)
         {
-            var VerifiData = await _unitOfWork.Repository<WahooDomain.Usuario>().GetFirstOrDefaultAsync(x => x.Login == request.Login && x.Password == request.Password);
+            var VerifiData = await _unitOfWork.Repository<WahooDomain.Usuario>().GetFirstOrDefaultAsync(x => x.Login == request.Username && x.Password == request.Password);
 
             if (VerifiData != null)
             {
@@ -37,7 +37,7 @@ namespace WahooApplication.Features.Login.Commands.AddLogin
             }
             else
             {
-                _logger.LogInformation($"{request.Login} no fue logueado");
+                _logger.LogInformation($"{request.Username} no fue logueado");
 
                 return null;
             }
