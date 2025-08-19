@@ -12,6 +12,7 @@ namespace WahooDomain
         public string DescripcionNotificacion { get; set; }
         public bool Enviada { get; set; }
         public int UsuarioId { get; set; }
+        public int RolId { get; set; }
         public Usuario Usuario { get; set; }
     }
 }
