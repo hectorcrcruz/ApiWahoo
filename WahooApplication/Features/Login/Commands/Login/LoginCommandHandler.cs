@@ -11,18 +11,18 @@ using WahooApplication.Models;
 
 namespace WahooApplication.Features.Login.Commands.AddLogin
 {
-    public class CreateLoginCommandHandler : IRequestHandler<CreateLoginCommand, LoginModel>
+    public class LoginCommandHandler : IRequestHandler<LoginCommand, LoginModel>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private readonly ILogger<CreateLoginCommandHandler> _logger;
-        public CreateLoginCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, ILogger<CreateLoginCommandHandler> logger)
+        private readonly ILogger<LoginCommandHandler> _logger;
+        public LoginCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, ILogger<LoginCommandHandler> logger)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _logger = logger;
         }
-        public async Task<LoginModel> Handle(CreateLoginCommand request, CancellationToken cancellationToken)
+        public async Task<LoginModel> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
             var VerifiData = await _unitOfWork.Repository<WahooDomain.Usuario>().GetFirstOrDefaultAsync(x => x.Login == request.Username && x.Password == request.Password);
 

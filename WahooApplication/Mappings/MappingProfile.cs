@@ -228,6 +228,8 @@ namespace WahooApplication.Mappings
             CreateMap<UpdateUsuarioCommand, Usuario>();
             CreateMap<Usuario, UsuarioModel>();
             CreateMap<Usuario, LoginModel>();
+            CreateMap<Usuario, RecoverPasswordModel>();
+
 
             CreateMap<CreateParametrizacionCommand, Parametrizacion>();
             CreateMap<CreateParametrizacionCommand, Parametrizacion>();
