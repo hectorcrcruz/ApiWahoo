@@ -6,8 +6,10 @@ using System.Net;
 using System.Security.Claims;
 using System.Text;
 using WahooApplication.Contracts.Persistence;
+using WahooApplication.Features.Item.Queries.ListItem;
 using WahooApplication.Features.Log.Commands.AddLog;
 using WahooApplication.Features.Login.Commands.AddLogin;
+using WahooApplication.Features.Login.Commands.RecoverPassword;
 using WahooApplication.Models;
 
 namespace WebApiWahoo.Controllers
@@ -29,7 +31,7 @@ namespace WebApiWahoo.Controllers
 
         [HttpPost("Login")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<ActionResult<LoginModel>> CreateLoginUsuario([FromBody] CreateLoginCommand command)
+        public async Task<ActionResult<LoginModel>> CreateLoginUsuario([FromBody] LoginCommand command)
         {
             var user = await _mediator.Send(command);
             if (user != null)
@@ -68,5 +70,13 @@ namespace WebApiWahoo.Controllers
                 return new LoginModel { Message = "¡Usuario no encontrado!" };
             }
         }
+
+        [HttpPost("RecoverPassword")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public async Task<ActionResult<LoginModel>> RecoverPasswordUsuario([FromBody] RecoverPasswordCommand command)
+        {
+            return Ok(await _mediator.Send(command));
+        }
+
     }
 }

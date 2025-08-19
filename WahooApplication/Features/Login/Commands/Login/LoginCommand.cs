@@ -8,7 +8,7 @@ using WahooApplication.Models;
 
 namespace WahooApplication.Features.Login.Commands.AddLogin
 {
-    public class CreateLoginCommand : IRequest<LoginModel>
+    public class LoginCommand : IRequest<LoginModel>
     {
         public string Username { get; set; }
         public string Password { get; set; }
