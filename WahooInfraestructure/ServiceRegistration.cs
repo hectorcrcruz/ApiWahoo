@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WahooApplication.Commons;
 using WahooApplication.Contracts.Persistence;
 using WahooApplication.Services;
 using WahooInfraestructure.Persistence;

@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using WahooApplication.Contracts.Persistence;
 using WahooApplication.Features.Log.Commands.AddLog;
-using WahooApplication.Services;
 
 namespace WahooApplication.Features.Usuario.Commands.AddUsuario
 {
@@ -30,11 +29,6 @@ namespace WahooApplication.Features.Usuario.Commands.AddUsuario
             bool resp = false;
             if (VerifiData == null)
             {
-                string? urlImagen = null;
-                if (request.ProfilePhoto != null)
-                {
-                    //urlImagen = await _blobStorageService.UploadAsync(request.ProfilePhoto);
-                }
                 var Entity = _mapper.Map<WahooDomain.Usuario>(request);
                 var EntityAdd = await _unitOfWork.Repository<WahooDomain.Usuario>().AddAsync(Entity);
 

@@ -1745,11 +1745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\Publicaciones\\API\\WahooApplication\\WahooApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\WahooProyect\\API\\WahooApplication\\WahooApplication.csproj",
       "projectName": "WahooApplication",
-      "projectPath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\Publicaciones\\API\\WahooApplication\\WahooApplication.csproj",
+      "projectPath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\WahooProyect\\API\\WahooApplication\\WahooApplication.csproj",
       "packagesPath": "C:\\Users\\Hecthor Cruz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\Publicaciones\\API\\WahooApplication\\obj\\",
+      "outputPath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\WahooProyect\\API\\WahooApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1771,8 +1771,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\Publicaciones\\API\\WahooDomain\\WahooDomain.csproj": {
-              "projectPath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\Publicaciones\\API\\WahooDomain\\WahooDomain.csproj"
+            "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\WahooProyect\\API\\WahooDomain\\WahooDomain.csproj": {
+              "projectPath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\WahooProyect\\API\\WahooDomain\\WahooDomain.csproj"
             }
           }
         }

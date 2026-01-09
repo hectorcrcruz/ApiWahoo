@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qoKuJBdntH81g6benplY5Rjq9YOFrYWVr5/1AYmXe1+XpmByLesjw5DPdKSIbvf5MF+xWGuExkmIurI1VsRbqw==",
+  "dgSpecHash": "Fcj2LEwrhJfRHpzqk+I/KZKBvtKtbpX6w5tdYKMkhwF48DYitvvGYrKZcjoak7Iwh8ETb5YKTydpcUU8pI5klQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\Publicaciones\\API\\WahooInfraestructure\\WahooInfraestructure.csproj",
+  "projectFilePath": "C:\\Users\\Hecthor Cruz\\Documents\\Proyectos\\AppWahoo\\WahooProyect\\API\\WahooInfraestructure\\WahooInfraestructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hecthor Cruz\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Hecthor Cruz\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

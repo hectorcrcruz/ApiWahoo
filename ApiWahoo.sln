@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2860375A-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{DCDA65CA-8485-45D1-A336-ED1D2F6E1A49}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WahooApplication", "WahooApplication\WahooApplication.csproj", "{07C459C5-A915-4080-8803-C1C76F876AE2}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WahooDomain", "WahooDomain\WahooDomain.csproj", "{1679734E-BA3C-4FC1-B8E6-40BBD0C111FA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WahooInfraestructure", "WahooInfraestructure\WahooInfraestructure.csproj", "{4E0B1017-F39F-4FAE-B755-B387639B30F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiWahoo", "WebApiWahoo\WebApiWahoo.csproj", "{7BCE1E55-DA89-46A7-89B4-09DFD9D6A6DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiWahoo", "WebApiWahoo\WebApiWahoo.csproj", "{7BCE1E55-DA89-46A7-89B4-09DFD9D6A6DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WahooApplication", "WahooApplication\WahooApplication.csproj", "{B79D330C-61CF-42E2-95B7-B47EBC64D77C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07C459C5-A915-4080-8803-C1C76F876AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07C459C5-A915-4080-8803-C1C76F876AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07C459C5-A915-4080-8803-C1C76F876AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07C459C5-A915-4080-8803-C1C76F876AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1679734E-BA3C-4FC1-B8E6-40BBD0C111FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1679734E-BA3C-4FC1-B8E6-40BBD0C111FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1679734E-BA3C-4FC1-B8E6-40BBD0C111FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,15 +35,19 @@ Global
 		{7BCE1E55-DA89-46A7-89B4-09DFD9D6A6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BCE1E55-DA89-46A7-89B4-09DFD9D6A6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BCE1E55-DA89-46A7-89B4-09DFD9D6A6DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79D330C-61CF-42E2-95B7-B47EBC64D77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79D330C-61CF-42E2-95B7-B47EBC64D77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79D330C-61CF-42E2-95B7-B47EBC64D77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79D330C-61CF-42E2-95B7-B47EBC64D77C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{07C459C5-A915-4080-8803-C1C76F876AE2} = {2860375A-DDFB-4C81-8B46-216DF7354D14}
 		{1679734E-BA3C-4FC1-B8E6-40BBD0C111FA} = {2860375A-DDFB-4C81-8B46-216DF7354D14}
 		{4E0B1017-F39F-4FAE-B755-B387639B30F8} = {DCDA65CA-8485-45D1-A336-ED1D2F6E1A49}
 		{7BCE1E55-DA89-46A7-89B4-09DFD9D6A6DE} = {2C93F96C-97F1-4DA4-8D52-06A2064839F5}
+		{B79D330C-61CF-42E2-95B7-B47EBC64D77C} = {2860375A-DDFB-4C81-8B46-216DF7354D14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {821E432A-C111-4F60-B9C7-58125C864E7E}
